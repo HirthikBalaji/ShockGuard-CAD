@@ -1,0 +1,404 @@
+{
+ "bom": {
+  "Upper_Enclosure": {
+   "material": "PETG / ASA (FDM) - prototype only",
+   "status": "ASSUMED",
+   "desc": "Upper shell: OLED window, UI button, finger tunnel, fingertip stop, reaction ceiling",
+   "printable": true,
+   "qty": 1,
+   "group": "ShockGuard_Assembly"
+  },
+  "Lower_Enclosure": {
+   "material": "PETG / ASA (FDM) - prototype only",
+   "status": "ASSUMED",
+   "desc": "Lower shell / chassis: mechanism, electronics and battery bays; slots for knob and release",
+   "printable": true,
+   "qty": 1,
+   "group": "ShockGuard_Assembly"
+  },
+  "Finger_Support": {
+   "material": "PETG (FDM) prototype; skin-contact material TBD (biocompatibility)",
+   "status": "VERIFY",
+   "desc": "Finger-support plate: trough, plunger aperture, MAX30102 window; clamps the plunger stack",
+   "printable": true,
+   "qty": 1,
+   "group": "ShockGuard_Assembly"
+  },
+  "Plunger_Body": {
+   "material": "Acetal (POM) or SLA resin; machined for repeatability",
+   "status": "VERIFY",
+   "desc": "Hollow plunger: optical bore, spring flange with latch lead-in chamfer, window counterbore",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Contact_Pad": {
+   "material": "Optically clear PC / PMMA / glass (TBD; skin-contact + optical test)",
+   "status": "VERIFY",
+   "desc": "Transparent contact window: blanches the pulp while the camera views through it",
+   "printable": false,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Compression_Spring": {
+   "material": "Music wire / 302 SS (stock spring TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "Compression spring; length follows mechanism state; rate NOT assigned",
+   "printable": false,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Spring_Seat": {
+   "material": "Acetal / printed PETG",
+   "status": "ASSUMED",
+   "desc": "Spring seat washer on optical bracket",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Guide": {
+   "material": "Acetal / PETG (bore reamed or sleeved)",
+   "status": "VERIFY",
+   "desc": "Plunger guide tube: flange bore, cocking-pin slot, latch window, integral latch pivot lug",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Travel_Stop": {
+   "material": "Acetal / PETG; shim stack for stroke calibration",
+   "status": "VERIFY",
+   "desc": "Travel-stop ring: hard upper limit for the flange; retains plunger and spring",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Cocking_Feature": {
+   "material": "Steel dowel pin pressed into printed knob",
+   "status": "ASSUMED",
+   "desc": "Radial cocking pin + knob (+Y side). Pull down to cock; pin also keys plunger rotation",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Release_Trigger": {
+   "material": "Acetal / PETG (FDM fine layer) - fatigue test",
+   "status": "VERIFY",
+   "desc": "Pivoting latch lever: tooth holds flange when cocked; release button rotates it clear",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Release_Button": {
+   "material": "PETG / ASA (FDM)",
+   "status": "ASSUMED",
+   "desc": "Mechanical release button (-Y side) - separate from the electronic UI button",
+   "printable": true,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Latch_Return_Spring": {
+   "material": "Stainless spring wire (stock, TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "Latch return spring: biases tooth into engagement; length follows lever angle",
+   "printable": false,
+   "qty": 1,
+   "group": "Plunger_Assembly"
+  },
+  "Optical_Mount": {
+   "material": "PETG (FDM) / SLA black resin",
+   "status": "ASSUMED",
+   "desc": "Removable optical bracket: camera pocket, ring-LED collar (centres spring), FPC groove",
+   "printable": true,
+   "qty": 1,
+   "group": "Optical_Assembly"
+  },
+  "Camera_Module": {
+   "material": "OV2640-class camera + macro lens (TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "Camera envelope (stiffener + lens holder + barrel); replace with selected module drawing",
+   "printable": false,
+   "qty": 1,
+   "group": "Optical_Assembly"
+  },
+  "Ring_LED": {
+   "material": "Ring PCB with white/RGB LEDs (colour-consistent, TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "Ring-LED illumination around lens; LEDs inside plunger bore",
+   "printable": false,
+   "qty": 1,
+   "group": "Optical_Assembly"
+  },
+  "MAX30102_Module": {
+   "material": "MAX30102 breakout (TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "PPG module; sensor face flush with trough through the support-plate window",
+   "printable": false,
+   "qty": 1,
+   "group": "PPG_Assembly"
+  },
+  "Sensor_Mount": {
+   "material": "PETG (FDM)",
+   "status": "VERIFY",
+   "desc": "MAX30102 pedestal; position set by ppg_mount_position",
+   "printable": true,
+   "qty": 1,
+   "group": "PPG_Assembly"
+  },
+  "OLED_Module": {
+   "material": "0.96in 128x64 I2C OLED (SSD1306-class, TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "OLED module envelope: PCB, glass, header",
+   "printable": false,
+   "qty": 1,
+   "group": "Display_Assembly"
+  },
+  "Display_Window": {
+   "material": "Clear PMMA / PC 1 mm (laser cut)",
+   "status": "ASSUMED",
+   "desc": "Replaceable clear display lens bonded into roof recess",
+   "printable": false,
+   "qty": 1,
+   "group": "Display_Assembly"
+  },
+  "Electronics_Tray": {
+   "material": "PETG (FDM)",
+   "status": "ASSUMED",
+   "desc": "Removable electronics carrier: PCB standoffs, charger rails, cable notches; retains battery",
+   "printable": true,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "ESP32_S3_Board": {
+   "material": "Custom carrier PCB + ESP32-S3-WROOM-1 (N16R8 suggested, TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "ESP32-S3 carrier envelope incl. camera FPC connector",
+   "printable": false,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "Charging_Board": {
+   "material": "1S Li-ion charger + protection, USB-C (TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "Charger board envelope with USB-C receptacle at rear wall",
+   "printable": false,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "Battery": {
+   "material": "1S Li-ion/LiPo - chemistry, capacity, protection NOT selected",
+   "status": "PLACEHOLDER",
+   "desc": "Configurable battery envelope with cable-exit tab",
+   "printable": false,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "Battery_Cover": {
+   "material": "PETG (FDM)",
+   "status": "ASSUMED",
+   "desc": "Flush battery access cover (2x M2 countersunk)",
+   "printable": true,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "Camera_FPC": {
+   "material": "Camera flex (length TBD by module)",
+   "status": "PLACEHOLDER",
+   "desc": "Camera FPC route: optical-mount groove -> rear bay -> ESP32 connector (clear of moving parts)",
+   "printable": false,
+   "qty": 1,
+   "group": "Electronics_Assembly"
+  },
+  "Push_Button": {
+   "material": "PETG / TPU cap",
+   "status": "ASSUMED",
+   "desc": "Electronic UI push-button cap (start / menu)",
+   "printable": true,
+   "qty": 1,
+   "group": "User_Controls"
+  },
+  "Tactile_Switch": {
+   "material": "6x6 mm tactile switch (TBD)",
+   "status": "PLACEHOLDER",
+   "desc": "UI switch envelope",
+   "printable": false,
+   "qty": 1,
+   "group": "User_Controls"
+  },
+  "Button_PCB": {
+   "material": "FR4 1.2 mm",
+   "status": "PLACEHOLDER",
+   "desc": "Small switch PCB on two roof bosses",
+   "printable": false,
+   "qty": 1,
+   "group": "User_Controls"
+  }
+ },
+ "fasteners": [
+  [
+   "Fastener_Shell_1",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Shell_2",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Shell_3",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Shell_4",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Shell_5",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Shell_6",
+   "Screw_M2x30_SHCS",
+   "Lower/Upper_Enclosure"
+  ],
+  [
+   "Fastener_Plate_1",
+   "Screw_M2x8_CSK_Top",
+   "Finger_Support"
+  ],
+  [
+   "Fastener_Plate_2",
+   "Screw_M2x8_CSK_Top",
+   "Finger_Support"
+  ],
+  [
+   "Fastener_Plate_3",
+   "Screw_M2x8_CSK_Top",
+   "Finger_Support"
+  ],
+  [
+   "Fastener_OptMount_1",
+   "Screw_M2x4_CSK_Bottom",
+   "Optical_Mount"
+  ],
+  [
+   "Fastener_OptMount_2",
+   "Screw_M2x4_CSK_Bottom",
+   "Optical_Mount"
+  ],
+  [
+   "Fastener_OptMount_3",
+   "Screw_M2x4_CSK_Bottom",
+   "Optical_Mount"
+  ],
+  [
+   "Fastener_OptMount_4",
+   "Screw_M2x4_CSK_Bottom",
+   "Optical_Mount"
+  ],
+  [
+   "Fastener_SensMount_1",
+   "Screw_M2x4_CSK_Bottom",
+   "Sensor_Mount"
+  ],
+  [
+   "Fastener_SensMount_2",
+   "Screw_M2x4_CSK_Bottom",
+   "Sensor_Mount"
+  ],
+  [
+   "Fastener_BattCover_1",
+   "Screw_M2x4_CSK_Bottom",
+   "Battery_Cover"
+  ],
+  [
+   "Fastener_BattCover_2",
+   "Screw_M2x4_CSK_Bottom",
+   "Battery_Cover"
+  ],
+  [
+   "Fastener_Tray_1",
+   "Screw_M2x5_Pan",
+   "Electronics_Tray"
+  ],
+  [
+   "Fastener_Tray_2",
+   "Screw_M2x5_Pan",
+   "Electronics_Tray"
+  ],
+  [
+   "Fastener_Tray_3",
+   "Screw_M2x5_Pan",
+   "Electronics_Tray"
+  ],
+  [
+   "Fastener_Tray_4",
+   "Screw_M2x5_Pan",
+   "Electronics_Tray"
+  ],
+  [
+   "Fastener_ESP_1",
+   "Screw_M2x5_Pan",
+   "ESP32_S3_Board"
+  ],
+  [
+   "Fastener_ESP_2",
+   "Screw_M2x5_Pan",
+   "ESP32_S3_Board"
+  ],
+  [
+   "Fastener_ESP_3",
+   "Screw_M2x5_Pan",
+   "ESP32_S3_Board"
+  ],
+  [
+   "Fastener_ESP_4",
+   "Screw_M2x5_Pan",
+   "ESP32_S3_Board"
+  ],
+  [
+   "Fastener_OLED_1",
+   "Screw_M2x5_Pan",
+   "OLED_Module"
+  ],
+  [
+   "Fastener_OLED_2",
+   "Screw_M2x5_Pan",
+   "OLED_Module"
+  ],
+  [
+   "Fastener_OLED_3",
+   "Screw_M2x5_Pan",
+   "OLED_Module"
+  ],
+  [
+   "Fastener_OLED_4",
+   "Screw_M2x5_Pan",
+   "OLED_Module"
+  ],
+  [
+   "Fastener_BtnPCB_1",
+   "Screw_M2x5_Pan",
+   "Button_PCB"
+  ],
+  [
+   "Fastener_BtnPCB_2",
+   "Screw_M2x5_Pan",
+   "Button_PCB"
+  ],
+  [
+   "Fastener_Latch_Pivot",
+   "Screw_M2x5_Pan",
+   "Release_Trigger (pivot)"
+  ]
+ ],
+ "screw_lib": {
+  "Screw_M2x30_SHCS": "ISO 4762 M2x30 socket head (shell joining, from below)",
+  "Screw_M2x8_CSK_Top": "ISO 10642 M2x8 countersunk (finger-support plate, from above)",
+  "Screw_M2x4_CSK_Bottom": "ISO 10642 M2x4 countersunk (mounts / battery cover, from below)",
+  "Screw_M2x5_Pan": "ISO 7045 M2x5 pan head (tray, PCBs, latch pivot)"
+ }
+}
