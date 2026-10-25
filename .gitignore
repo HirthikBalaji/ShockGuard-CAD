@@ -1,0 +1,7 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.FCBak
+Renders/_render.done
+Renders/_render.log
+Renders/_render_progress.txt

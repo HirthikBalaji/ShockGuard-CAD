@@ -1,0 +1,7 @@
+*.FCStd binary
+*.stl binary
+*.png binary
+*.pdf binary
+*.step linguist-generated=true
+STEP/** linguist-generated=true
+STL/** linguist-generated=true
