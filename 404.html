@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to GitHub Repository...</title>
+    <script>
+        (function() {
+            var repoBase = "https://github.com/HirthikBalaji/ShockGuard-CAD";
+            var path = window.location.pathname;
+            // Strip project prefix /ShockGuard-CAD or /ShockGuard-CAD/
+            path = path.replace(/^\/ShockGuard-CAD\/?/, '');
+            
+            if (!path || path === "index.html") {
+                window.location.replace(repoBase);
+                return;
+            }
+
+            // If it ends with slash or has no extension, assume directory (tree), otherwise blob
+            var isDir = path.endsWith('/') || !path.includes('.');
+            var gitHubUrl = repoBase + (isDir ? "/tree/main/" : "/blob/main/") + path.replace(/^\//, '');
+            window.location.replace(gitHubUrl);
+        })();
+    </script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #080C14; color: #F8FAFC; text-align: center; padding: 5rem 1rem;">
+    <h2 style="margin-bottom: 1rem;">Redirecting to ShockGuard GitHub Repository...</h2>
+    <p style="color: #94A3B8;">If you are not redirected automatically, please visit:</p>
+    <p style="margin-top: 1rem;">
+        <a id="redirectLink" href="https://github.com/HirthikBalaji/ShockGuard-CAD" style="color: #38BDF8; text-decoration: none; font-weight: 600;">
+            https://github.com/HirthikBalaji/ShockGuard-CAD
+        </a>
+    </p>
+    <script>
+        var path = window.location.pathname.replace(/^\/ShockGuard-CAD\/?/, '');
+        if (path) {
+            var isDir = path.endsWith('/') || !path.includes('.');
+            var target = "https://github.com/HirthikBalaji/ShockGuard-CAD" + (isDir ? "/tree/main/" : "/blob/main/") + path.replace(/^\//, '');
+            var link = document.getElementById("redirectLink");
+            if (link) {
+                link.href = target;
+                link.textContent = target;
+            }
+        }
+    </script>
+</body>
+</html>
