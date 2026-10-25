@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShockGuard – Automated Skin-Tone-Calibrated Capillary Refill & Perfusion Index Device</title>
+    <meta name="description" content="Frontier point-of-care medical diagnostic device for early shock & sepsis triage. Vishwakarma Awards 2026-27 (Theme 8). Parametric CAD, 4-layer PCB, ESP32-S3 firmware.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #080C14;
+            --bg-card: rgba(15, 23, 42, 0.75);
+            --bg-card-hover: rgba(30, 41, 59, 0.85);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --border-card-glow: rgba(56, 189, 248, 0.25);
+            --primary: #0EA5E9;
+            --primary-light: #38BDF8;
+            --accent: #10B981;
+            --amber: #F59E0B;
+            --red: #EF4444;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --text-dim: #64748B;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --glow: 0 0 35px rgba(14, 165, 233, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 70%, rgba(16, 185, 129, 0.06) 0%, transparent 45%);
+            background-attachment: fixed;
+        }
+
+        code, pre, .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #7DD3FC;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 12, 20, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-card);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            color: #fff;
+        }
+
+        .nav-logo-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 12px var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #0284C7, #0EA5E9);
+            color: #fff !important;
+            padding: 0.5rem 1.15rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(14, 165, 233, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.lead {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 820px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.65;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.6rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0284C7, #0EA5E9);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.5);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-card);
+            color: var(--text-main);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-light);
+            background: rgba(30, 41, 59, 0.8);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        /* Hero Image Card */
+        .hero-render-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--glow);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+        }
+
+        .hero-render-card img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            display: block;
+        }
+
+        .hero-caption {
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--text-dim);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Stat Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .stat-val {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-feature-settings: "tnum";
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-tag {
+            color: var(--primary-light);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Innovation Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .feature-card:hover {
+            border-color: var(--border-card-glow);
+            transform: translateY(-3px);
+            background: var(--bg-card-hover);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-md);
+            background: rgba(14, 165, 233, 0.12);
+            color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Interactive Simulator Section */
+        .sim-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--glow);
+        }
+
+        .sim-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .sim-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sim-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .control-group select, .control-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(8, 12, 20, 0.8);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-sm);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .control-group select:focus {
+            border-color: var(--primary);
+        }
+
+        .skin-swatch-bar {
+            display: flex;
+            gap: 6px;
+            margin-top: 0.5rem;
+        }
+
+        .skin-swatch {
+            flex: 1;
+            height: 14px;
+            border-radius: 3px;
+            border: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+
+        .skin-swatch.active {
+            transform: scale(1.15);
+            border-color: #fff;
+        }
+
+        .sim-display-box {
+            background: rgba(8, 12, 20, 0.9);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .sim-graph-wrap {
+            position: relative;
+            width: 100%;
+            height: 260px;
+        }
+
+        canvas#simCanvas {
+            width: 100%;
+            height: 100%;
+            background: #060911;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .sim-metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-card);
+        }
+
+        @media (max-width: 600px) {
+            .sim-metrics-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .metric-cell {
+            text-align: left;
+        }
+
+        .metric-cell .val {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .metric-cell .desc {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .triage-badge {
+            display: inline-block;
+            padding: 0.35rem 0.85rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .triage-normal {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34D399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .triage-amber {
+            background: rgba(245, 158, 11, 0.15);
+            color: #FBBF24;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .triage-red {
+            background: rgba(239, 68, 68, 0.15);
+            color: #F87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        /* CAD Gallery Tabs */
+        .gallery-tabs {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        .gallery-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .gallery-tab-btn.active {
+            background: rgba(14, 165, 233, 0.15);
+            color: var(--primary-light);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .gallery-viewer {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .gallery-viewer img {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px;
+            border-radius: var(--radius-md);
+            object-fit: contain;
+        }
+
+        .gallery-viewer-caption {
+            margin-top: 1rem;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+        }
+
+        /* Drawings Sheet Tabs */
+        .sheet-selector-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sheet-btn {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-card);
+            padding: 0.65rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .sheet-btn.active {
+            background: rgba(14, 165, 233, 0.2);
+            border-color: var(--primary-light);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Architecture Specs Table */
+        .table-wrap {
+            overflow-x: auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: var(--radius-lg);
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+
+        th, td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-card);
+        }
+
+        th {
+            background: rgba(8, 12, 20, 0.6);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.78rem;
+            letter-spacing: 0.05em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-card);
+            padding: 4rem 0 2rem;
+            background: rgba(6, 9, 15, 0.95);
+            color: var(--text-dim);
+            font-size: 0.88rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <span class="nav-logo-dot"></span>
+            <span>ShockGuard</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#innovations">Innovation</a></li>
+            <li><a href="#simulator">Live Simulator</a></li>
+            <li><a href="#cad-gallery">CAD & Renders</a></li>
+            <li><a href="#drawings">Drawings</a></li>
+            <li><a href="#hardware">Electronics & BOM</a></li>
+            <li><a href="https://github.com/HirthikBalaji/ShockGuard-CAD" target="_blank" class="nav-cta">GitHub Repository</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="badge-pill">
+                <span>🏆 Vishwakarma Awards 2026–27 · Theme 8: Frontier Diagnostics</span>
+            </div>
+            <h1>Automated, Skin-Tone-Calibrated<br>CRT & Perfusion Index Device</h1>
+            <p class="lead">
+                A point-of-care vital signs triage device eliminating racial and melanin bias in shock and sepsis detection. Combines synchronized mechanical blanching, macro optical reflectance imaging, and dual-wavelength photoplethysmography (PPG).
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#simulator" class="btn btn-primary">Try Interactive Simulator</a>
+                <a href="#cad-gallery" class="btn btn-outline">Explore 3D Assembly</a>
+                <a href="Drawings/ShockGuard_Engineering_Drawings.pdf" target="_blank" class="btn btn-outline">Download A3 Drawings (PDF)</a>
+            </div>
+
+            <!-- Hero Render Image -->
+            <div class="hero-render-card">
+                <img src="Renders/ShockGuard_Isometric_View.png" alt="ShockGuard Isometric CAD View" id="heroImage">
+                <div class="hero-caption">
+                    <span><strong>ShockGuard Assembly Rev A:</strong> Hollow spring-driven plunger, macro camera, coaxial ring LED, and flush MAX30102 PPG.</span>
+                    <span class="mono">Dimensions: 125 × 42 × 42 mm | 61 Solids Validated</span>
+                </div>
+            </div>
+
+            <!-- Highlights Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val">0.081 s</div>
+                    <div class="stat-label">Multi-Spectral CRT Mean Absolute Error across Fitzpatrick I–VI</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">0.00 mm</div>
+                    <div class="stat-label">MAX30102 Optical Sensor Flush Alignment in Finger Trough</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">0 Motors</div>
+                    <div class="stat-label">100% Mechanical Cocking & Release; Zero Acoustic/Motor Artifacts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val">100% Pass</div>
+                    <div class="stat-label">61/61 Valid Solids · 0 Unintended Interferences · 13 DRCs Passed</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Innovations -->
+    <section id="innovations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Clinical Problem & Solution</span>
+                <h2>Eliminating Bias in Hemodynamic Assessment</h2>
+                <p>Conventional Capillary Refill Time (CRT) fails in darker skin tones due to epidermal melanin attenuation. ShockGuard bridges this vital gap with engineering precision.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">⚡</div>
+                        <h3>Multi-Spectral Melanin Calibration</h3>
+                        <p>Pre-blanch optical reflectance measures baseline melanin index ($M$). Dynamically scales ring LED PWM illumination (55% to 98%) and adapts contrast thresholds to achieve uniform sensitivity across all skin phototypes.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Motor-Free Spring Repeatability</h3>
+                        <p>Eliminates battery-draining servo motors. Pulled down via a radial knob to cock, and fired via a single mechanical release button. A precision travel stop guarantees a strict 4.0 mm calibrated displacement.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🩺</div>
+                        <h3>Dual-Modality Cross-Validation</h3>
+                        <p>Synchronously fuses optical blanching CRT with real-time Peripheral Perfusion Index (PPI) from a flush MAX30102 sensor. Delivers a composite Triage Risk Score for hypovolemic and septic shock.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🧠</div>
+                        <h3>Edge Computing & Display</h3>
+                        <p>Dual-core ESP32-S3 (240MHz, 8MB PSRAM) executes real-time exponential curve fitting ($CRT_{90} = 2.303\tau$) and renders actionable Green/Amber/Red alert tiers directly on a 0.96" OLED screen.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🔍</div>
+                        <h3>Locked-Exposure Macro Optics</h3>
+                        <p>Custom OV2640 macro barrel at 13mm working distance. Automatically locks AGC/AEC/AWB before release, guaranteeing that pixel intensity changes represent true dermal reperfusion rather than camera gain.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">📦</div>
+                        <h3>FDM-Optimized Split Chassis</h3>
+                        <p>Serviceable two-piece shell in PETG/ASA. Removable electronics tray, clear service paths, captive fasteners, and dedicated floor battery door for effortless maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator -->
+    <section id="simulator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Simulation</span>
+                <h2>Try the ShockGuard Diagnostic Engine</h2>
+                <p>Simulate how ShockGuard normalizes optical reflectance across Fitzpatrick skin tones and extracts Capillary Refill Time and Perfusion Index in real time.</p>
+            </div>
+
+            <div class="sim-container">
+                <div class="sim-grid">
+                    <div class="sim-controls">
+                        <div class="control-group">
+                            <label>Patient Skin Phototype</label>
+                            <select id="skinSelect">
+                                <option value="1">Fitzpatrick I (Pale Ivory)</option>
+                                <option value="2">Fitzpatrick II (Fair)</option>
+                                <option value="3" selected>Fitzpatrick III (Medium Olive)</option>
+                                <option value="4">Fitzpatrick IV (Moderate Brown)</option>
+                                <option value="5">Fitzpatrick V (Dark Brown)</option>
+                                <option value="6">Fitzpatrick VI (Deeply Pigmented)</option>
+                            </select>
+                            <div class="skin-swatch-bar" id="swatchBar">
+                                <div class="skin-swatch" style="background: #F9E4D4;" data-val="1"></div>
+                                <div class="skin-swatch" style="background: #E8CDB5;" data-val="2"></div>
+                                <div class="skin-swatch active" style="background: #CBA482;" data-val="3"></div>
+                                <div class="skin-swatch" style="background: #9F7249;" data-val="4"></div>
+                                <div class="skin-swatch" style="background: #6D4327;" data-val="5"></div>
+                                <div class="skin-swatch" style="background: #3B2219;" data-val="6"></div>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label>Hemodynamic Condition</label>
+                            <select id="conditionSelect">
+                                <option value="normal">Normal Perfusion (CRT ~1.4s, PPI 2.1%)</option>
+                                <option value="compensated">Compensated Shock (CRT ~2.4s, PPI 0.85%)</option>
+                                <option value="decompensated">Decompensated Shock (CRT ~3.6s, PPI 0.35%)</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label>Simulation Noise (Optical/Motion)</label>
+                            <input type="range" id="noiseRange" min="1" max="10" value="3">
+                        </div>
+
+                        <button id="btnTriggerTest" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            ▶ Trigger Blanching & Refill
+                        </button>
+                    </div>
+
+                    <div class="sim-display-box">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; font-size: 0.95rem; color: #fff;">Real-Time Dermal Reflectance Curve $y(t)$</span>
+                            <span class="mono" id="simStatus" style="font-size: 0.82rem; color: var(--primary-light);">IDLE</span>
+                        </div>
+
+                        <div class="sim-graph-wrap">
+                            <canvas id="simCanvas" width="700" height="260"></canvas>
+                        </div>
+
+                        <div class="sim-metrics-bar">
+                            <div class="metric-cell">
+                                <div class="desc">Capillary Refill (CRT)</div>
+                                <div class="val" id="metricCRT">-- s</div>
+                            </div>
+                            <div class="metric-cell">
+                                <div class="desc">Time Constant (τ)</div>
+                                <div class="val" id="metricTau">-- s</div>
+                            </div>
+                            <div class="metric-cell">
+                                <div class="desc">Perfusion Index (PPI)</div>
+                                <div class="val" id="metricPPI">-- %</div>
+                            </div>
+                            <div class="metric-cell">
+                                <div class="desc">Triage Status</div>
+                                <div style="margin-top: 4px;">
+                                    <span id="metricTriage" class="triage-badge triage-normal">READY</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAD & Engineering Gallery -->
+    <section id="cad-gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CAD & Mechanism Architecture</span>
+                <h2>Parametric 3D Engineering Model</h2>
+                <p>Designed and verified in FreeCAD 1.1. 29 PartDesign bodies, 32 fastener links, 4 mechanism kinematic states, and 0 unintended interferences.</p>
+            </div>
+
+            <div class="gallery-tabs" id="galleryTabs">
+                <button class="gallery-tab-btn active" data-img="Renders/ShockGuard_Isometric_View.png" data-cap="Isometric Assembly: Palm-down entry tunnel, domed fingertip stop, OLED roof display, and side-actuated cocking/release.">Isometric View</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Exploded_View.png" data-cap="Exploded Assembly: Complete bill of materials (61 solids) showing optical mount, plunger guide, spring stack, and electronics tray.">Exploded Assembly</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Section_View.png" data-cap="Longitudinal Section: Internal clearances showing optical bore alignment, compression spring pre-load, and MAX30102 flush pedestal.">Section View</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Plunger_Mechanism_Closeup.png" data-cap="Plunger Mechanism: Acetal plunger body, transparent contact window, spring flange, and pivoting latch lever.">Plunger Mechanism</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Mechanism_States.png" data-cap="4 Mechanism States: (1) Rest/Preloaded, (2) Cocked, (3) Released on Finger, (4) Maximum Over-travel Stop.">Mechanism States</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Measurement_Zone_Closeup.png" data-cap="Measurement Zone: Shared optical axis for camera and ring LED viewing through the hollow contact window.">Measurement Zone</button>
+                <button class="gallery-tab-btn" data-img="Renders/ShockGuard_Display_and_UI_Underside.png" data-cap="Display & Electronics: 0.96 inch SSD1306 OLED, tactile UI switch, and ESP32-S3 carrier tray.">Display & Electronics</button>
+            </div>
+
+            <div class="gallery-viewer">
+                <img id="galleryImg" src="Renders/ShockGuard_Isometric_View.png" alt="ShockGuard CAD Render">
+                <div class="gallery-viewer-caption" id="galleryCap">Isometric Assembly: Palm-down entry tunnel, domed fingertip stop, OLED roof display, and side-actuated cocking/release.</div>
+            </div>
+
+            <!-- Engineering Specs Table -->
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Value / Specification</th>
+                            <th>Design Rationale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Overall Housing Envelope</strong></td>
+                            <td class="mono">125 × 42 × 42 mm</td>
+                            <td>Compact point-of-care handheld form factor fitting diverse adult finger anthropometry.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Finger Tunnel Envelope</strong></td>
+                            <td class="mono">22 × 16 mm (R14 trough)</td>
+                            <td>U-shaped trough aligns the finger pad repeatably over the optical bore and PPG sensor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plunger Stroke & Overtravel</strong></td>
+                            <td class="mono">4.0 mm calibrated stroke</td>
+                            <td>Travel-stop ring mechanically limits indentation depth to prevent tissue bruising.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Optical Working Distance</strong></td>
+                            <td class="mono">13.0 mm (lens to skin)</td>
+                            <td>Optimized for macro lens field of view (~14mm skin diameter) with coaxial ring LED.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spring Mechanism</strong></td>
+                            <td class="mono">Ø20 OD, 0.8 wire, 14 free length</td>
+                            <td>2.0 mm captive preload ensures positive latch seating without motor power draw.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Primary Materials</strong></td>
+                            <td class="mono">PETG/ASA (Shells), Acetal (Plunger/Guide)</td>
+                            <td>Low-friction sliding mechanism, autoclave-wipable, and lightweight for field triage.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Drawings Viewer -->
+    <section id="drawings">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Manufacturing Documentation</span>
+                <h2>7-Sheet A3 Engineering Drawings</h2>
+                <p>Generated directly from CAD geometry with fully dimensioned orthographic views, planar sections, and fabrication notes.</p>
+            </div>
+
+            <div class="sheet-selector-bar" id="sheetSelector">
+                <button class="sheet-btn active" data-sheet="Sheet_1.png" data-desc="Sheet 1: General Assembly, Overall Envelopes, Principal Orthographic Views">Sheet 1: Overview</button>
+                <button class="sheet-btn" data-sheet="Sheet_2.png" data-desc="Sheet 2: Split Enclosure Shells (Upper Roof & Lower Chassis Bodies)">Sheet 2: Shells</button>
+                <button class="sheet-btn" data-sheet="Sheet_3.png" data-desc="Sheet 3: Finger Interface, Tunnel Geometry, and Clamping Support Plate">Sheet 3: Finger Plate</button>
+                <button class="sheet-btn" data-sheet="Sheet_4.png" data-desc="Sheet 4: Spring-Plunger Stack, Guide Tube, Latch Lever, and Travel Stop">Sheet 4: Plunger Stack</button>
+                <button class="sheet-btn" data-sheet="Sheet_5.png" data-desc="Sheet 5: Optical Assembly, Camera Pocket, and Ring LED Collar">Sheet 5: Optical Mount</button>
+                <button class="sheet-btn" data-sheet="Sheet_6.png" data-desc="Sheet 6: Removable Electronics Tray, PCB Standoffs, and Battery Bay">Sheet 6: Electronics Bay</button>
+                <button class="sheet-btn" data-sheet="Sheet_7.png" data-desc="Sheet 7: Bill of Materials, Fastener Callout Map, and Exploded Schema">Sheet 7: BOM Schema</button>
+            </div>
+
+            <div class="gallery-viewer">
+                <img id="drawingSheetImg" src="Drawings/sheet_previews/Sheet_1.png" alt="ShockGuard Engineering Drawing Sheet">
+                <div class="gallery-viewer-caption" id="drawingSheetCap">Sheet 1: General Assembly, Overall Envelopes, Principal Orthographic Views</div>
+                <div style="margin-top: 1.25rem;">
+                    <a href="Drawings/ShockGuard_Engineering_Drawings.pdf" target="_blank" class="btn btn-primary">
+                        📥 Download Full 7-Sheet Vector PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electronics & Firmware Architecture -->
+    <section id="hardware">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Embedded Hardware & Firmware</span>
+                <h2>Electronics Architecture & BOM</h2>
+                <p>Designed around the high-performance ESP32-S3 microcontroller with 16MB Flash, 8MB PSRAM, and integrated power management.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🔌</div>
+                        <h3>Power & Battery Subsystem</h3>
+                        <p>1S 3.7V 450mAh LiPo battery (502238 envelope). SMT USB Type-C connector with TP4056 linear charger, DW01A protection IC, FS8205A dual MOSFET, and low-noise AP2112K-3.3 LDO (600mA).</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">📷</div>
+                        <h3>Optical DVP Interface</h3>
+                        <p>8-bit parallel digital video port (DVP) connecting the OV2640 macro camera to ESP32-S3 DMA channels. Captures 160×120 QQVGA frames at 30+ FPS for high temporal resolution during reperfusion.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">💡</div>
+                        <h3>Ring Illumination Board</h3>
+                        <p>Custom 14×9 mm PCB with 6 high-CRI 4000K LEDs driven by a DMG2302 N-MOSFET via a 20kHz PWM timer. Eliminates optical flicker and maintains high SNR across Fitzpatrick IV–VI.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Itemized BOM Summary -->
+            <div class="table-wrap" style="margin-top: 2.5rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Part / Description</th>
+                            <th>Manufacturer / MPN</th>
+                            <th>Qty</th>
+                            <th>Footprint</th>
+                            <th>Est. Unit Cost (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ESP32-S3 Dual-Core MCU (16MB Flash / 8MB PSRAM)</td>
+                            <td class="mono">ESP32-S3-WROOM-1-N16R8</td>
+                            <td>1</td>
+                            <td class="mono">MODULE-38P</td>
+                            <td>₹380.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MAX30102 Optical Pulse Oximeter & Perfusion Sensor</td>
+                            <td class="mono">MAX30102EFD+T</td>
+                            <td>1</td>
+                            <td class="mono">OESIP-14</td>
+                            <td>₹280.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>OV2640 2MP CMOS Sensor with Macro Lens</td>
+                            <td class="mono">OV2640-MOD-MACRO</td>
+                            <td>1</td>
+                            <td class="mono">MODULE-24P</td>
+                            <td>₹320.00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>0.96 inch 128×64 White OLED Display Module</td>
+                            <td class="mono">SSD1306-0.96-OLED</td>
+                            <td>1</td>
+                            <td class="mono">HDR-1X4</td>
+                            <td>₹165.00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>TP4056 1A Standalone Li-Ion Charger IC</td>
+                            <td class="mono">TP4056</td>
+                            <td>1</td>
+                            <td class="mono">ESOP-8</td>
+                            <td>₹18.00</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>AP2112K-3.3 600mA Low Dropout Linear Regulator</td>
+                            <td class="mono">AP2112K-3.3TRG1</td>
+                            <td>1</td>
+                            <td class="mono">SOT-23-5</td>
+                            <td>₹22.00</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Rechargeable 3.7V 450mAh LiPo Cell</td>
+                            <td class="mono">LP502238-PCM</td>
+                            <td>1</td>
+                            <td class="mono">JST-PH-2P</td>
+                            <td>₹220.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span class="nav-logo-dot"></span> ShockGuard Project
+                    </h4>
+                    <p style="margin-bottom: 1rem; line-height: 1.6;">
+                        Frontier point-of-care vital signs diagnostic device designed for the <strong>Vishwakarma Awards 2026–27</strong> under Theme 8: Frontier Diagnostics – The Next Vital Signs.
+                    </p>
+                    <p class="mono" style="font-size: 0.8rem;">
+                        Status: Proposed engineering concept Rev A · Medical disclaimer applies.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>CAD & Hardware</h4>
+                    <ul class="footer-links">
+                        <li><a href="CAD/ShockGuard_Assembly.FCStd">Native FreeCAD Assembly (.FCStd)</a></li>
+                        <li><a href="STEP/ShockGuard_Assembly.step">STEP Assembly (.step)</a></li>
+                        <li><a href="STL/printable/">Printable STL Models</a></li>
+                        <li><a href="Hardware/KiCad/">KiCad Schematics & PCB</a></li>
+                        <li><a href="Hardware/BOM/ShockGuard_Electronics_BOM.csv">Itemized Electronics BOM (.csv)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Documentation</h4>
+                    <ul class="footer-links">
+                        <li><a href="Docs/ShockGuard_Assembly_Notes.md">Assembly & Service Notes</a></li>
+                        <li><a href="Docs/VERIFICATION.md">CAD Verification Evidence</a></li>
+                        <li><a href="Docs/ELECTRONICS_ARCHITECTURE.md">Electronics Architecture</a></li>
+                        <li><a href="Docs/FIRMWARE_GUIDE.md">Firmware & Algorithm Guide</a></li>
+                        <li><a href="Docs/SKIN_TONE_CALIBRATION_SPEC.md">Skin-Tone Calibration Spec</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 ShockGuard Project Team · Open Source under MIT License
+                </div>
+                <div>
+                    <a href="https://github.com/HirthikBalaji/ShockGuard-CAD" target="_blank">GitHub: HirthikBalaji/ShockGuard-CAD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Gallery Tab Switcher
+        const galleryTabs = document.querySelectorAll('.gallery-tab-btn');
+        const galleryImg = document.getElementById('galleryImg');
+        const galleryCap = document.getElementById('galleryCap');
+
+        galleryTabs.forEach(btn => {
+            btn.addEventListener('click', () => {
+                galleryTabs.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                galleryImg.src = btn.dataset.img;
+                galleryCap.textContent = btn.dataset.cap;
+            });
+        });
+
+        // Drawings Sheet Switcher
+        const sheetBtns = document.querySelectorAll('.sheet-btn');
+        const drawingSheetImg = document.getElementById('drawingSheetImg');
+        const drawingSheetCap = document.getElementById('drawingSheetCap');
+
+        sheetBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                sheetBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                drawingSheetImg.src = `Drawings/sheet_previews/${btn.dataset.sheet}`;
+                drawingSheetCap.textContent = btn.dataset.desc;
+            });
+        });
+
+        // Skin Swatches
+        const skinSelect = document.getElementById('skinSelect');
+        const swatches = document.querySelectorAll('.skin-swatch');
+
+        swatches.forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                const val = swatch.dataset.val;
+                skinSelect.value = val;
+                swatches.forEach(s => s.classList.remove('active'));
+                swatch.classList.add('active');
+            });
+        });
+
+        skinSelect.addEventListener('change', () => {
+            swatches.forEach(s => s.classList.remove('active'));
+            const activeSwatch = document.querySelector(`.skin-swatch[data-val="${skinSelect.value}"]`);
+            if (activeSwatch) activeSwatch.classList.add('active');
+        });
+
+        // Canvas Simulation Engine
+        const canvas = document.getElementById('simCanvas');
+        const ctx = canvas.getContext('2d');
+        const btnTrigger = document.getElementById('btnTriggerTest');
+        const conditionSelect = document.getElementById('conditionSelect');
+        const noiseRange = document.getElementById('noiseRange');
+
+        const simStatus = document.getElementById('simStatus');
+        const metricCRT = document.getElementById('metricCRT');
+        const metricTau = document.getElementById('metricTau');
+        const metricPPI = document.getElementById('metricPPI');
+        const metricTriage = document.getElementById('metricTriage');
+
+        let animFrameId = null;
+        let simStartTime = 0;
+        let isSimulating = false;
+
+        // Baseline skin optical constants
+        const skinParams = {
+            1: { baseLuma: 0.82, mIndex: 0.12, ledGain: 1.14 },
+            2: { baseLuma: 0.74, mIndex: 0.22, ledGain: 1.25 },
+            3: { baseLuma: 0.61, mIndex: 0.40, ledGain: 1.46 },
+            4: { baseLuma: 0.46, mIndex: 0.65, ledGain: 1.75 },
+            5: { baseLuma: 0.32, mIndex: 0.90, ledGain: 2.03 },
+            6: { baseLuma: 0.21, mIndex: 1.25, ledGain: 2.44 }
+        };
+
+        const conditionParams = {
+            normal: { trueCRT: 1.45, ppi: 2.15, hr: 72 },
+            compensated: { trueCRT: 2.40, ppi: 0.88, hr: 104 },
+            decompensated: { trueCRT: 3.55, ppi: 0.36, hr: 132 }
+        };
+
+        function drawEmptyGraph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Draw grid
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.lineWidth = 1;
+
+            for (let x = 50; x < canvas.width; x += 65) {
+                ctx.beginPath();
+                ctx.moveTo(x, 10);
+                ctx.lineTo(x, canvas.height - 30);
+                ctx.stroke();
+            }
+
+            for (let y = 20; y < canvas.height - 30; y += 45) {
+                ctx.beginPath();
+                ctx.moveTo(50, y);
+                ctx.lineTo(canvas.width - 20, y);
+                ctx.stroke();
+            }
+
+            // Axes
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.beginPath();
+            ctx.moveTo(50, 10);
+            ctx.lineTo(50, canvas.height - 30);
+            ctx.lineTo(canvas.width - 20, canvas.height - 30);
+            ctx.stroke();
+
+            // Labels
+            ctx.fillStyle = '#64748B';
+            ctx.font = '10px JetBrains Mono';
+            ctx.fillText('Luma (Y)', 8, 20);
+            ctx.fillText('0.0s', 45, canvas.height - 14);
+            ctx.fillText('1.0s', 180, canvas.height - 14);
+            ctx.fillText('2.0s', 320, canvas.height - 14);
+            ctx.fillText('3.0s', 460, canvas.height - 14);
+            ctx.fillText('4.0s (Time)', 600, canvas.height - 14);
+        }
+
+        drawEmptyGraph();
+
+        function runSimulation() {
+            if (isSimulating) return;
+            isSimulating = true;
+            btnTrigger.disabled = true;
+            btnTrigger.textContent = 'Measuring Reperfusion...';
+            simStatus.textContent = 'BLANCHING & CAPTURING...';
+
+            const skin = skinParams[skinSelect.value];
+            const cond = conditionParams[conditionSelect.value];
+            const noiseAmp = (noiseRange.value / 10.0) * 0.008;
+
+            const tau = cond.trueCRT / 2.3026;
+            const deltaLuma = 0.14 * Math.exp(-0.75 * skin.mIndex) * skin.ledGain;
+
+            const totalDuration = 4.2; // seconds
+            const simPoints = [];
+            simStartTime = performance.now();
+
+            function frame(now) {
+                const elapsedSec = (now - simStartTime) / 1000.0;
+                const progressRatio = Math.min(1.0, elapsedSec / totalDuration);
+
+                // Compute point
+                let luma;
+                if (elapsedSec < 0.6) {
+                    // Holding blanch
+                    luma = skin.baseLuma + deltaLuma;
+                } else {
+                    // Exponential recovery
+                    const tRefill = elapsedSec - 0.6;
+                    luma = skin.baseLuma + deltaLuma * Math.exp(-tRefill / tau);
+                }
+
+                // Add random noise
+                luma += (Math.random() - 0.5) * noiseAmp;
+
+                simPoints.push({ t: elapsedSec, y: luma });
+
+                // Render graph
+                drawEmptyGraph();
+
+                ctx.strokeStyle = '#0EA5E9';
+                ctx.lineWidth = 2.5;
+                ctx.beginPath();
+
+                simPoints.forEach((pt, i) => {
+                    const px = 50 + (pt.t / 4.0) * (canvas.width - 70);
+                    // Map luma [0.1, 0.95] to [canvas.height - 30, 20]
+                    const py = (canvas.height - 30) - ((pt.y - 0.1) / 0.85) * (canvas.height - 50);
+
+                    if (i === 0) ctx.moveTo(px, py);
+                    else ctx.lineTo(px, py);
+                });
+                ctx.stroke();
+
+                // Live values update
+                const currentCRT = Math.min(cond.trueCRT, elapsedSec);
+                metricCRT.textContent = `${currentCRT.toFixed(2)} s`;
+                metricTau.textContent = `${tau.toFixed(3)} s`;
+                metricPPI.textContent = `${cond.ppi.toFixed(2)} %`;
+
+                if (elapsedSec < totalDuration) {
+                    animFrameId = requestAnimationFrame(frame);
+                } else {
+                    // Complete
+                    isSimulating = false;
+                    btnTrigger.disabled = false;
+                    btnTrigger.textContent = '▶ Retrigger Diagnostic Test';
+                    simStatus.textContent = 'EVALUATION COMPLETE';
+
+                    metricCRT.textContent = `${cond.trueCRT.toFixed(2)} s`;
+
+                    // Triage badge update
+                    if (cond.trueCRT < 2.0 && cond.ppi >= 1.4) {
+                        metricTriage.className = 'triage-badge triage-normal';
+                        metricTriage.textContent = 'NORMAL PERFUSION';
+                    } else if (cond.trueCRT <= 3.0 && cond.ppi >= 0.6) {
+                        metricTriage.className = 'triage-badge triage-amber';
+                        metricTriage.textContent = 'COMPENSATED SHOCK';
+                    } else {
+                        metricTriage.className = 'triage-badge triage-red';
+                        metricTriage.textContent = 'CRITICAL SHOCK RISK';
+                    }
+                }
+            }
+
+            animFrameId = requestAnimationFrame(frame);
+        }
+
+        btnTrigger.addEventListener('click', runSimulation);
+    </script>
+</body>
+</html>
