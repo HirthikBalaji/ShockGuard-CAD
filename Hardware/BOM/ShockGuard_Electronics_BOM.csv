@@ -1,0 +1,32 @@
+Item,Designator,Description,Manufacturer,Manufacturer Part Number,Supplier / LCSC,Footprint,Qty,Unit Cost (INR),Lead Time,Subsystem
+1,U1,"MCU ESP32-S3 Dual-Core 240MHz 16MB Flash 8MB PSRAM",Espressif Systems,ESP32-S3-WROOM-1-N16R8,C2913200,MODULE-38P-31.5X18MM,1,380.00,Local (2-3 days),Compute & Connectivity
+2,U2,"Integrated Optical Pulse Oximeter & Heart-Rate Sensor",Analog Devices / Maxim,MAX30102EFD+T,C78547,OESIP-14_5.6x3.3mm,1,280.00,Domestic (3-5 days),Sensors
+3,U3,"1A Standalone Linear Li-Ion Battery Charger with Thermal Regulation",NanJing Top Power,TP4056,C16581,ESOP-8_3.9x4.9mm,1,18.00,Local (1-2 days),Power Management
+4,U4,"One-Cell Lithium-Ion Battery Protection IC",Fortune Semiconductor,DW01A,C22434,SOT-23-6,1,8.50,Local (1-2 days),Power Management
+5,Q1,"Dual N-Channel Enhancement Mode Power MOSFET 20V 4A",Fortune Semiconductor,FS8205A,C32254,TSSOP-8,1,12.00,Local (1-2 days),Power Management
+6,U5,"600mA Low Dropout Linear Voltage Regulator 3.3V",Diodes Incorporated,AP2112K-3.3TRG1,C51118,SOT-23-5,1,22.00,Local (1-2 days),Power Management
+7,J1,"USB Type-C Receptacle 16-Pin SMT with 2 Shield Pins (USB 2.0)",Korean Hroparts Elec,TYPE-C-31-M-12,C165948,USB-C-SMD_TYPE-C-31-M-12,1,25.00,Local (1-2 days),Power & Programming
+8,J2,"24-Pin 0.5mm Pitch Bottom Contact FPC Connector for Camera",Hirose Electric,FH12-24S-0.5SH(55),C263884,FPC-SMD_24P-P0.50MM,1,35.00,Domestic (3-5 days),Optical Imaging
+9,CAM1,"OV2640 2-Megapixel CMOS Camera Sensor Module with Macro Lens",OmniVision,OV2640-MOD-MACRO,C2909477,MODULE_OV2640_9x9MM,1,320.00,Domestic (5-7 days),Optical Imaging
+10,DISP1,"0.96 inch 128x64 White OLED Display Module (I2C SSD1306)",Solomon Systech,SSD1306-0.96-OLED,C73380,HDR-1X4_P2.54MM,1,165.00,Local (2-3 days),Display & UI
+11,SW1,"Tactile Push Button Switch 6x6x5mm SMT",Omron Electronics,B3S-1000,C115358,SW-SMD_6.0x6.0mm,1,10.00,Local (1-2 days),User Controls
+12,Q2,"N-Channel 20V 2.8A MOSFET for Ring LED PWM Drive",Diodes Incorporated,DMG2302UK-7,C8545,SOT-23-3,1,9.00,Local (1-2 days),Optical Illumination
+13,LED1-LED6,"0603 High-CRI White Surface Mount LED 4000K",Everlight Electronics,19-217/W1D-ANPHY/3T,C2290,LED-0603_1608Metric,6,4.50,Local (1-2 days),Optical Illumination
+14,LED7,Red LED 0603 Charge Indicator,Everlight Electronics,19-217/R6C-AL1M2VY/3T,C84263,LED-0603_1608Metric,1,2.50,Local (1-2 days),Power Management
+15,LED8,Green LED 0603 Full Charge Indicator,Everlight Electronics,19-217/GHC-YR1S2/3T,C72043,LED-0603_1608Metric,1,3.00,Local (1-2 days),Power Management
+16,BAT1,"Rechargeable 3.7V 450mAh LiPo Battery (502238 envelope)",PKCELL,LP502238-PCM,DOM-BAT-450,JST-PH-2P-2.0MM,1,220.00,Domestic (3-5 days),Power Storage
+17,R1,Resistor 1.2k 1% 0402 (TP4056 PROG 1000mA),Yageo,RC0402FR-071K2L,C25879,R-0402_1005Metric,1,0.75,Local (1-2 days),Power Management
+18,R2,Resistor 100R 5% 0402 (DW01A VCC Filter),Yageo,RC0402JR-07100RL,C25077,R-0402_1005Metric,1,0.50,Local (1-2 days),Power Management
+19,R3,Resistor 1k 5% 0402 (DW01A CS Sense),Yageo,RC0402JR-071KL,C25879,R-0402_1005Metric,1,0.50,Local (1-2 days),Power Management
+20,R4-R5,"Resistor 5.1k 1% 0402 (USB-C CC1, CC2 Pull-Down)",Yageo,RC0402FR-075K1L,C25900,R-0402_1005Metric,2,0.75,Local (1-2 days),Power & Programming
+21,R6-R7,"Resistor 4.7k 1% 0402 (I2C Bus SDA/SCL Pull-Up)",Yageo,RC0402FR-074K7L,C25905,R-0402_1005Metric,2,0.75,Local (1-2 days),Sensors & Display
+22,R8,Resistor 10k 5% 0402 (ESP32 EN Pull-Up),Yageo,RC0402JR-0710KL,C25744,R-0402_1005Metric,1,0.50,Local (1-2 days),Compute & Connectivity
+23,R9,Resistor 10k 5% 0402 (UI Button Pull-Up),Yageo,RC0402JR-0710KL,C25744,R-0402_1005Metric,1,0.50,Local (1-2 days),User Controls
+24,R10,Resistor 100k 5% 0402 (Gate Pull-Down for Ring LED),Yageo,RC0402JR-07100KL,C25741,R-0402_1005Metric,1,0.50,Local (1-2 days),Optical Illumination
+25,R11-R13,"Resistor 15R 1% 0603 (Current Limiter Ring LED strings)",Yageo,RC0603FR-0715RL,C22791,R-0603_1608Metric,3,0.80,Local (1-2 days),Optical Illumination
+26,C1-C4,Capacitor Ceramic 10uF 10V X5R 0603,Murata Electronics,GRM188R61A106KE69D,C19702,C-0603_1608Metric,4,2.20,Local (1-2 days),Decoupling & LDO
+27,C5-C10,Capacitor Ceramic 100nF 25V X7R 0402,Murata Electronics,GRM155R71E104KE14D,C1525,C-0402_1005Metric,6,0.90,Local (1-2 days),Decoupling
+28,C11,Capacitor Ceramic 1uF 16V X5R 0402,Murata Electronics,GRM155R61C105KA12D,C52923,C-0402_1005Metric,1,1.20,Local (1-2 days),Power Management
+29,C12,Capacitor Ceramic 100nF 50V X7R 0603 (DW01A VDD filter),Murata Electronics,GRM188R71H104KA93D,C14663,C-0603_1608Metric,1,1.10,Local (1-2 days),Power Management
+30,PCB1,"4-Layer FR4 Impedance-Controlled Carrier PCB (30x22mm)",LionCircuits / JLCPCB,SG-CARRIER-V1,PCB-SG-01,CUSTOM-30x22,1,120.00,Domestic (4-6 days),Fabrication
+31,PCB2,"2-Layer Ring-LED Illuminator Board (OD 14mm, ID 9mm)",LionCircuits / JLCPCB,SG-RING-V1,PCB-SG-02,CUSTOM-RING-14x9,1,45.00,Domestic (4-6 days),Fabrication
