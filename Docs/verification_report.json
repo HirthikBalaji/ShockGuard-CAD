@@ -1,0 +1,1988 @@
+{
+ "generated": "2026-10-25 22:01",
+ "freecad": "1.1.4",
+ "integrity": {
+  "errors": [],
+  "sketches": {
+   "Sk_Upper_Outline": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Upper_Cavity": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Lower_Outline": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Lower_Cavity": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Plunger_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Pad_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Spring_Wire": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Seat_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Guide_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Stop_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Knob_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Tooth_LeadIn": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_RelBtn_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_LatchSpring_Wire": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_OptMount_Outline": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Tray_Outline": {
+    "solve": 0,
+    "fully_constrained": true
+   },
+   "Sk_Button_Profile": {
+    "solve": 0,
+    "fully_constrained": true
+   }
+  },
+  "bodies": {
+   "Upper_Enclosure": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 34301.13,
+    "closed": true
+   },
+   "Lower_Enclosure": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28276.96,
+    "closed": true
+   },
+   "Finger_Support": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2942.56,
+    "closed": true
+   },
+   "Plunger_Body": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1023.74,
+    "closed": true
+   },
+   "Contact_Pad": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 227.46,
+    "closed": true
+   },
+   "Compression_Spring": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 181.92,
+    "closed": true
+   },
+   "Spring_Seat": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 82.69,
+    "closed": true
+   },
+   "Guide": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2230.1,
+    "closed": true
+   },
+   "Travel_Stop": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 491.27,
+    "closed": true
+   },
+   "Cocking_Feature": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 368.23,
+    "closed": true
+   },
+   "Release_Trigger": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 187.38,
+    "closed": true
+   },
+   "Release_Button": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 238.36,
+    "closed": true
+   },
+   "Latch_Return_Spring": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1.89,
+    "closed": true
+   },
+   "Optical_Mount": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2020.99,
+    "closed": true
+   },
+   "Camera_Module": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 442.59,
+    "closed": true
+   },
+   "Ring_LED": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 79.49,
+    "closed": true
+   },
+   "MAX30102_Module": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 344.64,
+    "closed": true
+   },
+   "Sensor_Mount": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 3965.41,
+    "closed": true
+   },
+   "OLED_Module": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1735.84,
+    "closed": true
+   },
+   "Display_Window": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 482.8,
+    "closed": true
+   },
+   "Electronics_Tray": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2659.04,
+    "closed": true
+   },
+   "ESP32_S3_Board": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2463.33,
+    "closed": true
+   },
+   "Charging_Board": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 975.92,
+    "closed": true
+   },
+   "Battery": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 5036.0,
+    "closed": true
+   },
+   "Battery_Cover": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1376.82,
+    "closed": true
+   },
+   "Camera_FPC": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 25.61,
+    "closed": true
+   },
+   "Push_Button": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 233.39,
+    "closed": true
+   },
+   "Tactile_Switch": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 135.62,
+    "closed": true
+   },
+   "Button_PCB": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 266.88,
+    "closed": true
+   },
+   "Fastener_Shell_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Shell_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Shell_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Shell_4": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Shell_5": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Shell_6": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.65,
+    "closed": true
+   },
+   "Fastener_Plate_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28.44,
+    "closed": true
+   },
+   "Fastener_Plate_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28.44,
+    "closed": true
+   },
+   "Fastener_Plate_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28.44,
+    "closed": true
+   },
+   "Fastener_OptMount_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_OptMount_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_OptMount_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_OptMount_4": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_SensMount_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_SensMount_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_BattCover_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_BattCover_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.87,
+    "closed": true
+   },
+   "Fastener_Tray_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_Tray_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_Tray_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_Tray_4": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_ESP_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_ESP_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_ESP_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_ESP_4": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_OLED_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_OLED_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_OLED_3": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_OLED_4": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_BtnPCB_1": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_BtnPCB_2": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   },
+   "Fastener_Latch_Pivot": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.45,
+    "closed": true
+   }
+  },
+  "summary": {
+   "objects": 638,
+   "parts": 61,
+   "bodies": 29,
+   "links": 32,
+   "invalid_solids": [],
+   "sketches_fully_constrained": "17/17"
+  }
+ },
+ "interference": {
+  "1": {
+   "state": "Rest (uncocked, flange on stop)",
+   "stroke_mm": 4.0,
+   "latch_angle_deg": -8.6,
+   "unintended": [],
+   "intended": [
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_1",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_2",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_3",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_4",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_5",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_5 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_6",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_6 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_1",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_2",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_3",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_4",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_1",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_2",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_2 in Upper_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_1",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_2",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_3",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_1",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_2",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_4 in Lower_Enclosure)"
+    ],
+    [
+     "Guide",
+     "Fastener_Latch_Pivot",
+     2.3538,
+     "thread engagement / clamp (Fastener_Latch_Pivot in Guide)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_1 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_2 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_3",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_3 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_4",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_4 in Optical_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_1 in Sensor_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_2 in Sensor_Mount)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_1",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_2",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_3 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_4 in Electronics_Tray)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_1",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_1 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_2",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_2 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_3",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_3 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_4",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_4 in ESP32_S3_Board)"
+    ]
+   ],
+   "finger_overlap": {
+    "Plunger_Body": 39.712,
+    "Contact_Pad": 179.963
+   }
+  },
+  "2": {
+   "state": "Cocked (latched)",
+   "stroke_mm": 0.0,
+   "latch_angle_deg": 0.0,
+   "unintended": [],
+   "intended": [
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_1",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_2",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_3",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_4",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_5",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_5 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_6",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_6 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_1",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_2",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_3",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_4",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_1",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_2",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_2 in Upper_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_1",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_2",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_3",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_1",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_2",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_4 in Lower_Enclosure)"
+    ],
+    [
+     "Guide",
+     "Fastener_Latch_Pivot",
+     2.3538,
+     "thread engagement / clamp (Fastener_Latch_Pivot in Guide)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_1 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_2 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_3",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_3 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_4",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_4 in Optical_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_1 in Sensor_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_2 in Sensor_Mount)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_1",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_2",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_3 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_4 in Electronics_Tray)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_1",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_1 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_2",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_2 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_3",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_3 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_4",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_4 in ESP32_S3_Board)"
+    ]
+   ],
+   "finger_overlap": {}
+  },
+  "3": {
+   "state": "Released / contact (illustrative)",
+   "stroke_mm": 2.8,
+   "latch_angle_deg": -8.6,
+   "unintended": [],
+   "intended": [
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_1",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_2",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_3",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_4",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_5",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_5 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_6",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_6 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_1",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_2",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_3",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_4",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_1",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_2",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_2 in Upper_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_1",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_2",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_3",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_1",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_2",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_4 in Lower_Enclosure)"
+    ],
+    [
+     "Guide",
+     "Fastener_Latch_Pivot",
+     2.3538,
+     "thread engagement / clamp (Fastener_Latch_Pivot in Guide)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_1 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_2 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_3",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_3 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_4",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_4 in Optical_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_1 in Sensor_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_2 in Sensor_Mount)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_1",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_2",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_3 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_4 in Electronics_Tray)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_1",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_1 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_2",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_2 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_3",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_3 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_4",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_4 in ESP32_S3_Board)"
+    ]
+   ],
+   "finger_overlap": {
+    "Plunger_Body": 17.349,
+    "Contact_Pad": 125.292
+   }
+  },
+  "4": {
+   "state": "Max travel (no finger)",
+   "stroke_mm": 4.0,
+   "latch_angle_deg": -8.6,
+   "unintended": [],
+   "intended": [
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_1",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_2",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_3",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_4",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_5",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_5 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_Shell_6",
+     4.0974,
+     "thread engagement / clamp (Fastener_Shell_6 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_1",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_2",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_2 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_3",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_3 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_OLED_4",
+     6.3688,
+     "thread engagement / clamp (Fastener_OLED_4 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_1",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_1 in Upper_Enclosure)"
+    ],
+    [
+     "Upper_Enclosure",
+     "Fastener_BtnPCB_2",
+     3.9937,
+     "thread engagement / clamp (Fastener_BtnPCB_2 in Upper_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_1",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_2",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Plate_3",
+     4.359,
+     "thread engagement / clamp (Fastener_Plate_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_1",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_BattCover_2",
+     2.441,
+     "thread engagement / clamp (Fastener_BattCover_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_1 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_2 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_3 in Lower_Enclosure)"
+    ],
+    [
+     "Lower_Enclosure",
+     "Fastener_Tray_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_Tray_4 in Lower_Enclosure)"
+    ],
+    [
+     "Guide",
+     "Fastener_Latch_Pivot",
+     2.3538,
+     "thread engagement / clamp (Fastener_Latch_Pivot in Guide)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_1 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_2 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_3",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_3 in Optical_Mount)"
+    ],
+    [
+     "Optical_Mount",
+     "Fastener_OptMount_4",
+     1.7436,
+     "thread engagement / clamp (Fastener_OptMount_4 in Optical_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_1",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_1 in Sensor_Mount)"
+    ],
+    [
+     "Sensor_Mount",
+     "Fastener_SensMount_2",
+     1.7436,
+     "thread engagement / clamp (Fastener_SensMount_2 in Sensor_Mount)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_1",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_Tray_2",
+     0.194,
+     "thread engagement / clamp (Fastener_Tray_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_1",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_1 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_2",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_2 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_3",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_3 in Electronics_Tray)"
+    ],
+    [
+     "Electronics_Tray",
+     "Fastener_ESP_4",
+     2.9641,
+     "thread engagement / clamp (Fastener_ESP_4 in Electronics_Tray)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_1",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_1 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_2",
+     4.1909,
+     "thread engagement / clamp (Fastener_ESP_2 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_3",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_3 in ESP32_S3_Board)"
+    ],
+    [
+     "ESP32_S3_Board",
+     "Fastener_ESP_4",
+     6.8514,
+     "thread engagement / clamp (Fastener_ESP_4 in ESP32_S3_Board)"
+    ]
+   ],
+   "finger_overlap": {
+    "Plunger_Body": 39.712,
+    "Contact_Pad": 179.963
+   }
+  }
+ },
+ "mechanism": {
+  "latch_tooth_gap_cocked_mm": 0.1,
+  "latch_blocks_upward_motion": true,
+  "flange_to_stop_gap_cocked_mm": 0.3,
+  "plunger_window_below_trough_cocked_mm": 0.8,
+  "finger_to_plunger_cocked_mm": 0.8,
+  "finger_to_window_cocked_mm": 0.8,
+  "flange_to_stop_gap_max_mm": 0.0,
+  "stop_blocks_overtravel": true,
+  "tooth_clearance_released_mm": 0.172,
+  "pin_to_guide_slot_top_open": true,
+  "cocking_pin_to_housing_max_mm": 0.3,
+  "cocking_pin_to_stop_max_mm": 0.25,
+  "cocking_pin_to_housing_cocked_mm": 0.3,
+  "radial_clear_flange_guide_mm": 0.3,
+  "radial_clear_tube_stop_mm": 0.3,
+  "radial_clear_tube_plate_mm": 0.5,
+  "radial_clear_spring_guide_mm": 0.3,
+  "radial_clear_spring_collar_mm": 0.7,
+  "spring_solid_height_mm": 5.6,
+  "spring_installed_cocked_mm": 8.0,
+  "spring_length_at_stop_mm": 12.0,
+  "spring_free_length_mm": 14.0,
+  "spring_preload_deflection_at_stop_mm": 2.0,
+  "spring_cocked_deflection_mm": 6.0,
+  "spring_space_ok": true,
+  "max_indentation_if_finger_on_ceiling_mm": 3.2,
+  "latch_engagement_mm": 1.2,
+  "release_button_stroke_mm": 1.95,
+  "tooth_retraction_mm": 1.5,
+  "min_clearance_moving_to_electronics_mm": {
+   "Release_Trigger->ESP32_S3_Board": 0.4,
+   "Compression_Spring->Camera_FPC": 2.007,
+   "Compression_Spring->Ring_LED": 2.2,
+   "Plunger_Body->Ring_LED": 3.106,
+   "Compression_Spring->Camera_Module": 3.188,
+   "Cocking_Feature->Ring_LED": 3.433,
+   "Plunger_Body->Camera_Module": 3.905,
+   "Plunger_Body->MAX30102_Module": 4.29
+  },
+  "ui_button_to_release_mechanism_min_mm": 49.153,
+  "housing_envelope_mm": [
+   125.0,
+   42.0,
+   42.0
+  ]
+ },
+ "optics": {
+  "state2": {
+   "view_cone_half_angle_deg": 30.1,
+   "lens_to_window_mm": 10.7,
+   "lens_to_skin_mm": 13.0,
+   "viewed_skin_diameter_mm": 14.0,
+   "obstructions": {}
+  },
+  "state3": {
+   "view_cone_half_angle_deg": 24.7,
+   "lens_to_window_mm": 13.5,
+   "lens_to_skin_mm": 15.0,
+   "viewed_skin_diameter_mm": 13.8,
+   "obstructions": {}
+  },
+  "led_inside_bore": true,
+  "led_outer_radius_mm": 6.3,
+  "plunger_bore_radius_mm": 6.5,
+  "led_to_plunger_clear_cocked_mm": 3.106,
+  "camera_to_plunger_clear_cocked_mm": 3.905,
+  "ppg_sensor_top_minus_trough_mm": 0.0,
+  "ppg_centre_from_fingertip_stop_mm": 30.0,
+  "camera_axis_from_fingertip_stop_mm": 9.0,
+  "ppg_window_to_plunger_aperture_edge_mm": 8.45,
+  "ppg_to_moving_parts_min_mm": 5.75,
+  "working_distance_lens_to_skin_mm": 13.0
+ },
+ "assembly_paths": {
+  "1. Remove 6x M2x30 shell screws (downwards)": "clear",
+  "2. Lift upper shell with display + UI button": "clear",
+  "3. Remove 3x plate screws (upwards)": "clear",
+  "4. Lift finger-support plate": "clear",
+  "5. Lift travel stop": "clear",
+  "6. Remove battery cover (downwards, after its 2 screws)": "clear",
+  "7. Remove battery through floor opening": "clear",
+  "8. Lift electronics tray with boards": "clear",
+  "9. Withdraw cocking pin + knob radially (+Y) through wall slot": "clear",
+  "10. Lift plunger + window out of guide (pin removed, latch released)": "clear",
+  "note: plunger cannot lift with knob fitted (knob passes wall slot)": "confirmed - pin must be fitted last / removed first"
+ },
+ "printability": {
+  "Upper_Enclosure": {
+   "orientation": "flipped (top face on bed)",
+   "overhang_area_mm2": 189.1,
+   "support_likely": true
+  },
+  "Lower_Enclosure": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 364.2,
+   "support_likely": true
+  },
+  "Finger_Support": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Plunger_Body": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Spring_Seat": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Guide": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 52.4,
+   "support_likely": true
+  },
+  "Travel_Stop": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Cocking_Feature": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Release_Trigger": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Release_Button": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Optical_Mount": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 37.8,
+   "support_likely": true
+  },
+  "Sensor_Mount": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 15.9,
+   "support_likely": false
+  },
+  "Electronics_Tray": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Battery_Cover": {
+   "orientation": "as modelled",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  },
+  "Push_Button": {
+   "orientation": "flipped (top face on bed)",
+   "overhang_area_mm2": 0.0,
+   "support_likely": false
+  }
+ },
+ "design_rules": [
+  {
+   "rule": "Roof over tunnel >= 1.5 mm",
+   "value": 2.0,
+   "limit": ">= 1.5",
+   "pass": true
+  },
+  {
+   "rule": "Spring preload at stop > 0 (spring captive, plunger seated)",
+   "value": 2.0,
+   "limit": "> 0.0",
+   "pass": true
+  },
+  {
+   "rule": "Spring solid height < cocked length",
+   "value": 5.6,
+   "limit": "< 8.0",
+   "pass": true
+  },
+  {
+   "rule": "Guide bore >= spring OD + 0.2",
+   "value": 20.6,
+   "limit": ">= 20.2",
+   "pass": true
+  },
+  {
+   "rule": "Spring ID clears collar by >= 0.2 (radial)",
+   "value": 0.7,
+   "limit": ">= 0.2",
+   "pass": true
+  },
+  {
+   "rule": "Ring-LED outer edge inside plunger bore",
+   "value": 6.3,
+   "limit": "< 6.5",
+   "pass": true
+  },
+  {
+   "rule": "Latch tooth clears plunger tube (>= 0.3)",
+   "value": 0.55,
+   "limit": ">= 0.3",
+   "pass": true
+  },
+  {
+   "rule": "Latch lever below guide top",
+   "value": 18.6,
+   "limit": "< 20.5",
+   "pass": true
+  },
+  {
+   "rule": "Sensor mount clears guide OD",
+   "value": 102.5,
+   "limit": ">= 101.3",
+   "pass": true
+  },
+  {
+   "rule": "Support plate covers PPG module",
+   "value": 121.5,
+   "limit": ">= 117.5",
+   "pass": true
+  },
+  {
+   "rule": "Positive camera working distance",
+   "value": 13.0,
+   "limit": "> 0.0",
+   "pass": true
+  },
+  {
+   "rule": "OLED header clears ESP32 module",
+   "value": 31.4,
+   "limit": ">= 20.3",
+   "pass": true
+  },
+  {
+   "rule": "Battery below tray (>= 1 mm)",
+   "value": 1.8,
+   "limit": ">= 0.0",
+   "pass": true
+  }
+ ],
+ "parameter_propagation": {
+  "changes": {
+   "overall_length": 135,
+   "overall_height": 44,
+   "finger_opening_width": 20,
+   "plunger_travel": 5,
+   "ppg_mount_position": 23,
+   "spring_installed_length": 9,
+   "spring_free_length": 16
+  },
+  "errors": [],
+  "invalid": [],
+  "upper_length_after": 135.0,
+  "housing_height_after": 44.0,
+  "top_over_tunnel_after": 2.0,
+  "plunger_axis_x_after": 99.0,
+  "ppg_x_after": 122.0,
+  "unintended_interference_after": [],
+  "design_rule_failures_after": [],
+  "restored_volume_max_delta_mm3": 0.0
+ },
+ "reimport": {
+  "assembly_step": {
+   "valid": true,
+   "solids": 61,
+   "expected_solids": 61,
+   "bbox_mm": [
+    125.99,
+    51.0,
+    42.8
+   ],
+   "size_kB": 951
+  },
+  "component_steps": {
+   "Battery.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 5036.0
+   },
+   "Battery_Cover.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1376.8
+   },
+   "Button_PCB.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 266.9
+   },
+   "Camera_FPC.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 25.6
+   },
+   "Camera_Module.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 442.6
+   },
+   "Charging_Board.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 975.9
+   },
+   "Cocking_Feature.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 368.2
+   },
+   "Compression_Spring.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 181.9
+   },
+   "Contact_Pad.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 227.5
+   },
+   "Display_Window.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 482.8
+   },
+   "ESP32_S3_Board.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2463.3
+   },
+   "Electronics_Tray.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2659.0
+   },
+   "Finger_Support.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2942.6
+   },
+   "Guide.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2230.1
+   },
+   "Latch_Return_Spring.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1.9
+   },
+   "Lower_Enclosure.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28277.0
+   },
+   "MAX30102_Module.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 344.6
+   },
+   "OLED_Module.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1735.8
+   },
+   "Optical_Mount.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2021.0
+   },
+   "Plunger_Body.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1023.7
+   },
+   "Push_Button.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 233.4
+   },
+   "Release_Button.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 238.4
+   },
+   "Release_Trigger.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 187.4
+   },
+   "Ring_LED.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 79.5
+   },
+   "Screw_M2x30_SHCS.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 110.6
+   },
+   "Screw_M2x4_CSK_Bottom.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 15.9
+   },
+   "Screw_M2x5_Pan.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 30.5
+   },
+   "Screw_M2x8_CSK_Top.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 28.4
+   },
+   "Sensor_Mount.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 3965.4
+   },
+   "Spring_Seat.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 82.7
+   },
+   "Tactile_Switch.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 135.6
+   },
+   "Travel_Stop.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 491.3
+   },
+   "Upper_Enclosure.step": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 34301.1
+   }
+  },
+  "stl": {
+   "ShockGuard_Assembly.stl": {
+    "facets": 162310,
+    "solid": false,
+    "non_manifold": true,
+    "self_intersections": "n/a (multi-body)",
+    "note": "visualisation mesh of 61 touching bodies - not a single printable solid",
+    "volume_mm3": 94113.5
+   },
+   "Battery_Cover.stl": {
+    "facets": 1382,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 1376.9
+   },
+   "Cocking_Feature.stl": {
+    "facets": 920,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 367.9
+   },
+   "Electronics_Tray.stl": {
+    "facets": 4476,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 2658.9
+   },
+   "Finger_Support.stl": {
+    "facets": 2374,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 2944.0
+   },
+   "Guide.stl": {
+    "facets": 1466,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 2229.1
+   },
+   "Lower_Enclosure.stl": {
+    "facets": 20900,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 28270.6
+   },
+   "Optical_Mount.stl": {
+    "facets": 2802,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 2020.5
+   },
+   "Plunger_Body.stl": {
+    "facets": 1884,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 1022.9
+   },
+   "Push_Button.stl": {
+    "facets": 836,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 233.2
+   },
+   "Release_Button.stl": {
+    "facets": 1256,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 238.1
+   },
+   "Release_Trigger.stl": {
+    "facets": 556,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 187.4
+   },
+   "Sensor_Mount.stl": {
+    "facets": 728,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 3965.4
+   },
+   "Spring_Seat.stl": {
+    "facets": 672,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 82.6
+   },
+   "Travel_Stop.stl": {
+    "facets": 672,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 490.8
+   },
+   "Upper_Enclosure.stl": {
+    "facets": 13696,
+    "solid": true,
+    "non_manifold": false,
+    "self_intersections": false,
+    "note": "",
+    "volume_mm3": 34310.3
+   }
+  }
+ },
+ "runtime_s": 368.4
+}

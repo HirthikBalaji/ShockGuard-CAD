@@ -1,0 +1,346 @@
+FreeCAD 1.1.4, Libs: 1.1.4R20260928 (Git shallow)
+FreeCAD is free and open-source software licensed under the terms of LGPL2+ license.
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/ShockGuard_Assembly.step(19814 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Upper_Enclosure.step(2535 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Lower_Enclosure.step(4125 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Finger_Support.step(814 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Plunger_Body.step(373 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Contact_Pad.step(127 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Compression_Spring.step(753 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Spring_Seat.step(112 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Guide.step(527 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Travel_Stop.step(112 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Cocking_Feature.step(143 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Release_Trigger.step(447 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Release_Button.step(188 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Latch_Return_Spring.step(596 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Optical_Mount.step(1303 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Camera_Module.step(357 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Ring_LED.step(382 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/MAX30102_Module.step(454 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Sensor_Mount.step(594 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/OLED_Module.step(610 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Display_Window.step(170 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Electronics_Tray.step(1350 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/ESP32_S3_Board.step(842 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Charging_Board.step(368 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Battery.step(312 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Battery_Cover.step(348 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Camera_FPC.step(302 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 2                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Push_Button.step(143 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Tactile_Switch.step(215 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Button_PCB.step(248 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Screw_M2x30_SHCS.step(118 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Screw_M2x8_CSK_Top.step(98 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Screw_M2x4_CSK_Bottom.step(98 ents)  Write  Done[0m
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/balaji/Downloads/CAD_GEN/ShockGuard_CAD/STEP/components/Screw_M2x5_Pan.step(118 ents)  Write  Done[0m
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+saving......
+state 1: unintended []  finger {'Plunger_Body': 39.712, 'Contact_Pad': 179.963}
+state 2: unintended []  finger {}
+state 3: unintended []  finger {'Plunger_Body': 17.349, 'Contact_Pad': 125.292}
+state 4: unintended []  finger {'Plunger_Body': 39.712, 'Contact_Pad': 179.963}
+mechanism: {'latch_tooth_gap_cocked_mm': 0.1, 'latch_blocks_upward_motion': True, 'flange_to_stop_gap_cocked_mm': 0.3, 'plunger_window_below_trough_cocked_mm': 0.8, 'finger_to_plunger_cocked_mm': 0.8, 'finger_to_window_cocked_mm': 0.8, 'flange_to_stop_gap_max_mm': 0.0, 'stop_blocks_overtravel': True, 'tooth_clearance_released_mm': 0.172, 'pin_to_guide_slot_top_open': True, 'cocking_pin_to_housing_max_mm': 0.3, 'cocking_pin_to_stop_max_mm': 0.25, 'cocking_pin_to_housing_cocked_mm': 0.3, 'radial_clear_flange_guide_mm': 0.3, 'radial_clear_tube_stop_mm': 0.3, 'radial_clear_tube_plate_mm': 0.5, 'radial_clear_spring_guide_mm': 0.3, 'radial_clear_spring_collar_mm': 0.7, 'spring_solid_height_mm': 5.6, 'spring_installed_cocked_mm': 8.0, 'spring_length_at_stop_mm': 12.0, 'spring_free_length_mm': 14.0, 'spring_preload_deflection_at_stop_mm': 2.0, 'spring_cocked_deflection_mm': 6.0, 'spring_space_ok': True, 'max_indentation_if_finger_on_ceiling_mm': 3.2, 'latch_engagement_mm': 1.2, 'release_button_stroke_mm': 1.95, 'tooth_retraction_mm': 1.5, 'ui_button_to_release_mechanism_min_mm': 49.153, 'housing_envelope_mm': [125.0, 42.0, 42.0]}
+optics: {'state2': {'view_cone_half_angle_deg': 30.1, 'lens_to_window_mm': 10.7, 'lens_to_skin_mm': 13.0, 'viewed_skin_diameter_mm': 14.0, 'obstructions': {}}, 'state3': {'view_cone_half_angle_deg': 24.7, 'lens_to_window_mm': 13.5, 'lens_to_skin_mm': 15.0, 'viewed_skin_diameter_mm': 13.8, 'obstructions': {}}, 'led_inside_bore': True, 'led_outer_radius_mm': 6.3, 'plunger_bore_radius_mm': 6.5, 'led_to_plunger_clear_cocked_mm': 3.106, 'camera_to_plunger_clear_cocked_mm': 3.905, 'ppg_sensor_top_minus_trough_mm': 0.0, 'ppg_centre_from_fingertip_stop_mm': 30.0, 'camera_axis_from_fingertip_stop_mm': 9.0, 'ppg_window_to_plunger_aperture_edge_mm': 8.45, 'ppg_to_moving_parts_min_mm': 5.75, 'working_distance_lens_to_skin_mm': 13.0}
+1. Remove 6x M2x30 shell screws (downwards) -> clear
+2. Lift upper shell with display + UI button -> clear
+3. Remove 3x plate screws (upwards) -> clear
+4. Lift finger-support plate -> clear
+5. Lift travel stop -> clear
+6. Remove battery cover (downwards, after its 2 screws) -> clear
+7. Remove battery through floor opening -> clear
+8. Lift electronics tray with boards -> clear
+printability: {'Upper_Enclosure': 189.1, 'Lower_Enclosure': 364.2, 'Finger_Support': 0.0, 'Plunger_Body': 0.0, 'Spring_Seat': 0.0, 'Guide': 52.4, 'Travel_Stop': 0.0, 'Cocking_Feature': 0.0, 'Release_Trigger': 0.0, 'Release_Button': 0.0, 'Optical_Mount': 37.8, 'Sensor_Mount': 15.9, 'Electronics_Tray': 0.0, 'Battery_Cover': 0.0, 'Push_Button': 0.0}
+DRC fails: []
+propagation: {'changes': {'overall_length': 135, 'overall_height': 44, 'finger_opening_width': 20, 'plunger_travel': 5, 'ppg_mount_position': 23, 'spring_installed_length': 9, 'spring_free_length': 16}, 'errors': [], 'invalid': [], 'upper_length_after': 135.0, 'housing_height_after': 44.0, 'top_over_tunnel_after': 2.0, 'plunger_axis_x_after': 99.0, 'ppg_x_after': 122.0, 'unintended_interference_after': [], 'design_rule_failures_after': [], 'restored_volume_max_delta_mm3': 0.0}
+reimport assembly: {'valid': True, 'solids': 61, 'expected_solids': 61, 'bbox_mm': [125.99, 51.0, 42.8], 'size_kB': 951}
+bad component steps: []
+bad stl: []
+VERIFY_DONE in 368.4 s
+)

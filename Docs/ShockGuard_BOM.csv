@@ -1,0 +1,34 @@
+item,part,subassembly,qty,material / selection,status,printable,description
+1,Upper_Enclosure,ShockGuard_Assembly,1,PETG / ASA (FDM) - prototype only,ASSUMED,yes,"Upper shell: OLED window, UI button, finger tunnel, fingertip stop, reaction ceiling"
+2,Lower_Enclosure,ShockGuard_Assembly,1,PETG / ASA (FDM) - prototype only,ASSUMED,yes,"Lower shell / chassis: mechanism, electronics and battery bays; slots for knob and release"
+3,Finger_Support,ShockGuard_Assembly,1,PETG (FDM) prototype; skin-contact material TBD (biocompatibility),VERIFY,yes,"Finger-support plate: trough, plunger aperture, MAX30102 window; clamps the plunger stack"
+4,Plunger_Body,Plunger_Assembly,1,Acetal (POM) or SLA resin; machined for repeatability,VERIFY,yes,"Hollow plunger: optical bore, spring flange with latch lead-in chamfer, window counterbore"
+5,Contact_Pad,Plunger_Assembly,1,Optically clear PC / PMMA / glass (TBD; skin-contact + optical test),VERIFY,no,Transparent contact window: blanches the pulp while the camera views through it
+6,Compression_Spring,Plunger_Assembly,1,Music wire / 302 SS (stock spring TBD),PLACEHOLDER,no,Compression spring; length follows mechanism state; rate NOT assigned
+7,Spring_Seat,Plunger_Assembly,1,Acetal / printed PETG,ASSUMED,yes,Spring seat washer on optical bracket
+8,Guide,Plunger_Assembly,1,Acetal / PETG (bore reamed or sleeved),VERIFY,yes,"Plunger guide tube: flange bore, cocking-pin slot, latch window, integral latch pivot lug"
+9,Travel_Stop,Plunger_Assembly,1,Acetal / PETG; shim stack for stroke calibration,VERIFY,yes,Travel-stop ring: hard upper limit for the flange; retains plunger and spring
+10,Cocking_Feature,Plunger_Assembly,1,Steel dowel pin pressed into printed knob,ASSUMED,yes,Radial cocking pin + knob (+Y side). Pull down to cock; pin also keys plunger rotation
+11,Release_Trigger,Plunger_Assembly,1,Acetal / PETG (FDM fine layer) - fatigue test,VERIFY,yes,Pivoting latch lever: tooth holds flange when cocked; release button rotates it clear
+12,Release_Button,Plunger_Assembly,1,PETG / ASA (FDM),ASSUMED,yes,Mechanical release button (-Y side) - separate from the electronic UI button
+13,Latch_Return_Spring,Plunger_Assembly,1,"Stainless spring wire (stock, TBD)",PLACEHOLDER,no,Latch return spring: biases tooth into engagement; length follows lever angle
+14,Optical_Mount,Optical_Assembly,1,PETG (FDM) / SLA black resin,ASSUMED,yes,"Removable optical bracket: camera pocket, ring-LED collar (centres spring), FPC groove"
+15,Camera_Module,Optical_Assembly,1,OV2640-class camera + macro lens (TBD),PLACEHOLDER,no,Camera envelope (stiffener + lens holder + barrel); replace with selected module drawing
+16,Ring_LED,Optical_Assembly,1,"Ring PCB with white/RGB LEDs (colour-consistent, TBD)",PLACEHOLDER,no,Ring-LED illumination around lens; LEDs inside plunger bore
+17,MAX30102_Module,PPG_Assembly,1,MAX30102 breakout (TBD),PLACEHOLDER,no,PPG module; sensor face flush with trough through the support-plate window
+18,Sensor_Mount,PPG_Assembly,1,PETG (FDM),VERIFY,yes,MAX30102 pedestal; position set by ppg_mount_position
+19,OLED_Module,Display_Assembly,1,"0.96in 128x64 I2C OLED (SSD1306-class, TBD)",PLACEHOLDER,no,"OLED module envelope: PCB, glass, header"
+20,Display_Window,Display_Assembly,1,Clear PMMA / PC 1 mm (laser cut),ASSUMED,no,Replaceable clear display lens bonded into roof recess
+21,Electronics_Tray,Electronics_Assembly,1,PETG (FDM),ASSUMED,yes,"Removable electronics carrier: PCB standoffs, charger rails, cable notches; retains battery"
+22,ESP32_S3_Board,Electronics_Assembly,1,"Custom carrier PCB + ESP32-S3-WROOM-1 (N16R8 suggested, TBD)",PLACEHOLDER,no,ESP32-S3 carrier envelope incl. camera FPC connector
+23,Charging_Board,Electronics_Assembly,1,"1S Li-ion charger + protection, USB-C (TBD)",PLACEHOLDER,no,Charger board envelope with USB-C receptacle at rear wall
+24,Battery,Electronics_Assembly,1,"1S Li-ion/LiPo - chemistry, capacity, protection NOT selected",PLACEHOLDER,no,Configurable battery envelope with cable-exit tab
+25,Battery_Cover,Electronics_Assembly,1,PETG (FDM),ASSUMED,yes,Flush battery access cover (2x M2 countersunk)
+26,Camera_FPC,Electronics_Assembly,1,Camera flex (length TBD by module),PLACEHOLDER,no,Camera FPC route: optical-mount groove -> rear bay -> ESP32 connector (clear of moving parts)
+27,Push_Button,User_Controls,1,PETG / TPU cap,ASSUMED,yes,Electronic UI push-button cap (start / menu)
+28,Tactile_Switch,User_Controls,1,6x6 mm tactile switch (TBD),PLACEHOLDER,no,UI switch envelope
+29,Button_PCB,User_Controls,1,FR4 1.2 mm,PLACEHOLDER,no,Small switch PCB on two roof bosses
+30,Screw_M2x30_SHCS,Fasteners,6,Stainless A2 (assumed),ASSUMED,no,"ISO 4762 M2x30 socket head (shell joining, from below)"
+31,Screw_M2x8_CSK_Top,Fasteners,3,Stainless A2 (assumed),ASSUMED,no,"ISO 10642 M2x8 countersunk (finger-support plate, from above)"
+32,Screw_M2x4_CSK_Bottom,Fasteners,8,Stainless A2 (assumed),ASSUMED,no,"ISO 10642 M2x4 countersunk (mounts / battery cover, from below)"
+33,Screw_M2x5_Pan,Fasteners,15,Stainless A2 (assumed),ASSUMED,no,"ISO 7045 M2x5 pan head (tray, PCBs, latch pivot)"

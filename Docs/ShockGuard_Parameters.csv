@@ -1,0 +1,147 @@
+parameter,value,unit,status,notes,spreadsheet_cell
+overall_length,125.0,mm,ASSUMED,Housing length along X (finger axis),Params.B2
+overall_width,42.0,mm,ASSUMED,Housing width along Y,Params.B3
+overall_height,42.0,mm,ASSUMED,Housing height along Z; 2 mm above the 25-40 mm guide because the coaxial camera/plunger stack sits under the finger tunnel,Params.B4
+corner_radius,6.0,mm,ASSUMED,Plan-view corner radius,Params.B5
+top_edge_fillet,2.0,mm,ASSUMED,Fillet on upper-shell top perimeter,Params.B6
+bottom_edge_fillet,1.5,mm,ASSUMED,Fillet on lower-shell bottom perimeter,Params.B7
+enclosure_wall_thickness,2.0,mm,VERIFY,FDM wall / floor / roof thickness (5 perimeters @0.4 mm),Params.B8
+finger_opening_width,22.0,mm,VERIFY,Tunnel width; ergonomic test across adult finger sizes required,Params.B9
+finger_opening_height,16.0,mm,VERIFY,Tunnel height from trough bottom to reaction ceiling,Params.B10
+finger_support_length,45.0,mm,ASSUMED,Tunnel length from fingertip stop to entry face,Params.B11
+trough_radius,14.0,mm,ASSUMED,Concave centring trough radius in finger support,Params.B12
+trough_depth,1.5,mm,ASSUMED,Trough depth below support-plate top,Params.B13
+camera_mount_position,9.0,mm,VERIFY,Fingertip stop -> plunger/camera axis (pulp centre),Params.B14
+ppg_mount_position,21.0,mm,VERIFY,Plunger axis -> MAX30102 centre (proximal on finger),Params.B15
+plate_half_width,13.0,mm,ASSUMED,Half-width of the finger-support plate,Params.B16
+plunger_diameter,16.5,mm,ASSUMED,Plunger tube OD,Params.B17
+plunger_bore,13.0,mm,ASSUMED,Plunger optical bore ID (camera/LED path),Params.B18
+flange_diameter,20.0,mm,ASSUMED,Plunger flange OD (spring seat + latch face),Params.B19
+flange_thickness,3.0,mm,ASSUMED,Plunger flange thickness,Params.B20
+flange_chamfer,0.6,mm,ASSUMED,Lead-in chamfer on flange top (cams latch tooth when cocking),Params.B21
+plunger_travel,4.0,mm,VERIFY,Max stroke from cocked position to travel stop,Params.B22
+plunger_rest_gap,0.8,mm,ASSUMED,Contact window below trough surface when cocked (insertion clearance),Params.B23
+contact_indent_nominal,2.0,mm,VERIFY,ILLUSTRATIVE pulp indentation used only for the 'released' configuration,Params.B24
+contact_pad_diameter,14.0,mm,ASSUMED,Transparent contact window OD,Params.B25
+contact_pad_thickness,1.5,mm,ASSUMED,Transparent contact window thickness,Params.B26
+spring_outer_diameter,20.0,mm,PLACEHOLDER,"Compression spring OD - select stock spring, measure k",Params.B27
+spring_wire_diameter,0.8,mm,PLACEHOLDER,Spring wire diameter,Params.B28
+spring_free_length,14.0,mm,PLACEHOLDER,Spring free length,Params.B29
+spring_installed_length,8.0,mm,VERIFY,Spring length in the cocked state,Params.B30
+spring_total_coils,6.0,-,PLACEHOLDER,Total coils (geometry only; no rate assigned),Params.B31
+guide_wall,2.0,mm,ASSUMED,Guide tube wall,Params.B32
+spring_seat_thickness,1.0,mm,ASSUMED,Spring seat washer thickness,Params.B33
+stop_thickness,2.0,mm,VERIFY,Travel-stop ring thickness (shim-adjustable stroke),Params.B34
+support_plate_thickness,3.0,mm,ASSUMED,Finger-support plate thickness,Params.B35
+moving_part_clearance,0.3,mm,VERIFY,Radial clearance on sliding fits (FDM: tune 0.2-0.4),Params.B36
+plunger_hole_clearance,0.5,mm,ASSUMED,Radial clearance plunger <-> finger-support hole,Params.B37
+cocking_pin_diameter,2.5,mm,ASSUMED,Radial cocking pin (steel dowel) diameter,Params.B38
+knob_diameter,8.0,mm,ASSUMED,Cocking knob diameter,Params.B39
+knob_length,6.0,mm,ASSUMED,Cocking knob length,Params.B40
+latch_overlap,1.2,mm,VERIFY,Radial engagement of latch tooth over flange rim,Params.B41
+latch_thickness,2.0,mm,ASSUMED,Latch lever thickness,Params.B42
+latch_release_angle,8.6,deg,DERIVED,Lever rotation that clears the tooth (overlap+0.3 mm over 10 mm arm),Params.B43
+release_button_x_offset,23.0,mm,ASSUMED,Plunger axis -> release button (on -Y side),Params.B44
+optical_mount_thickness,2.5,mm,ASSUMED,Optical bracket base thickness,Params.B45
+optical_mount_size,26.0,mm,ASSUMED,Optical bracket square size,Params.B46
+collar_od,17.0,mm,ASSUMED,Ring-LED collar OD (also centres the spring),Params.B47
+collar_id,12.4,mm,ASSUMED,Ring-LED collar ID,Params.B48
+cam_board_size,9.0,mm,PLACEHOLDER,Camera stiffener square (OV2640-class module envelope),Params.B49
+cam_board_t,0.5,mm,PLACEHOLDER,Camera stiffener thickness,Params.B50
+cam_holder,8.5,mm,PLACEHOLDER,Lens holder square,Params.B51
+cam_holder_h,4.5,mm,PLACEHOLDER,Lens holder height (= collar height),Params.B52
+cam_barrel_d,7.0,mm,PLACEHOLDER,Lens barrel diameter,Params.B53
+cam_barrel_h,2.0,mm,PLACEHOLDER,Lens barrel height,Params.B54
+ring_light_diameter,14.0,mm,PLACEHOLDER,Ring-LED PCB OD,Params.B55
+ring_light_inner,9.0,mm,PLACEHOLDER,Ring-LED PCB ID,Params.B56
+ring_light_thickness,0.8,mm,PLACEHOLDER,Ring-LED PCB thickness,Params.B57
+ring_led_radius,5.5,mm,PLACEHOLDER,LED pitch radius (inside plunger bore),Params.B58
+max_pcb,14.0,mm,PLACEHOLDER,MAX30102 breakout PCB square,Params.B59
+max_pcb_t,1.0,mm,PLACEHOLDER,MAX30102 breakout PCB thickness,Params.B60
+max_sensor_l,5.6,mm,PLACEHOLDER,MAX30102 package length (datasheet 5.6 mm - verify),Params.B61
+max_sensor_w,3.3,mm,PLACEHOLDER,MAX30102 package width (datasheet 3.3 mm - verify),Params.B62
+max_sensor_h,1.55,mm,PLACEHOLDER,MAX30102 package height (datasheet 1.55 mm - verify),Params.B63
+oled_pcb_w,27.3,mm,PLACEHOLDER,0.96in OLED module PCB (X),Params.B64
+oled_pcb_h,27.8,mm,PLACEHOLDER,0.96in OLED module PCB (Y),Params.B65
+oled_pcb_t,1.2,mm,PLACEHOLDER,OLED PCB thickness,Params.B66
+oled_glass_w,26.7,mm,PLACEHOLDER,OLED glass (X),Params.B67
+oled_glass_h,19.3,mm,PLACEHOLDER,OLED glass (Y),Params.B68
+oled_glass_t,1.4,mm,PLACEHOLDER,OLED glass thickness,Params.B69
+oled_window_width,24.0,mm,ASSUMED,Display window opening (X),Params.B70
+oled_window_height,13.0,mm,ASSUMED,Display window opening (Y),Params.B71
+oled_position_x,40.0,mm,ASSUMED,Display centre X,Params.B72
+oled_lens_t,1.0,mm,ASSUMED,Clear display lens thickness,Params.B73
+button_position_x,14.0,mm,ASSUMED,UI push-button centre X,Params.B74
+button_cap_d,8.0,mm,ASSUMED,UI button cap diameter,Params.B75
+esp_x0,33.0,mm,ASSUMED,ESP32-S3 carrier PCB start X,Params.B76
+esp_pcb_l,30.0,mm,PLACEHOLDER,"ESP32-S3 carrier PCB length (custom carrier, TBD)",Params.B77
+esp_pcb_w,22.0,mm,PLACEHOLDER,ESP32-S3 carrier PCB width,Params.B78
+pcb_t,1.6,mm,ASSUMED,Standard PCB thickness,Params.B79
+wroom_l,25.5,mm,PLACEHOLDER,ESP32-S3-WROOM-1 length (datasheet 25.5 - verify),Params.B80
+wroom_w,18.0,mm,PLACEHOLDER,ESP32-S3-WROOM-1 width (datasheet 18.0 - verify),Params.B81
+wroom_h,3.1,mm,PLACEHOLDER,ESP32-S3-WROOM-1 height (datasheet 3.1 - verify),Params.B82
+chg_pcb_l,28.0,mm,PLACEHOLDER,"Li-ion charger board length (TP4056-class, TBD)",Params.B83
+chg_pcb_w,17.0,mm,PLACEHOLDER,Charger board width,Params.B84
+usbc_w,8.94,mm,PLACEHOLDER,USB-C receptacle width,Params.B85
+usbc_l,7.35,mm,PLACEHOLDER,USB-C receptacle depth,Params.B86
+usbc_h,3.26,mm,PLACEHOLDER,USB-C receptacle height,Params.B87
+battery_length,38.0,mm,PLACEHOLDER,Battery envelope (chemistry/capacity NOT selected),Params.B88
+battery_width,22.0,mm,PLACEHOLDER,Battery envelope width,Params.B89
+battery_thickness,6.0,mm,PLACEHOLDER,Battery envelope thickness,Params.B90
+battery_x_center,33.0,mm,ASSUMED,Battery centre X,Params.B91
+tray_z,10.0,mm,ASSUMED,Electronics tray underside Z,Params.B92
+tray_thickness,1.6,mm,ASSUMED,Electronics tray thickness,Params.B93
+standoff_h,3.0,mm,ASSUMED,PCB standoff height on tray,Params.B94
+electronics_clearance,1.0,mm,VERIFY,Minimum air gap PCB/battery <-> moving parts,Params.B95
+screw_d,2.0,mm,ASSUMED,M2 screws throughout,Params.B96
+fastener_clearance,0.2,mm,VERIFY,Radial clearance on screw holes (2.4 mm hole),Params.B97
+pilot_d,1.7,mm,VERIFY,Pilot for self-tapping M2 (or replace with heat-set inserts),Params.B98
+state,2.0,-,CONFIG,"1=Rest(uncocked, on stop) 2=Cocked 3=Released/contact 4=Max travel",Params.B99
+explode,0.0,-,CONFIG,"0 = assembled, 1 = exploded",Params.B100
+x_tip,80.0,mm,DERIVED,Fingertip stop X,Params.B101
+x_m,89.0,mm,DERIVED,Measurement axis X (plunger + camera),Params.B102
+x_ppg,110.0,mm,DERIVED,MAX30102 centre X,Params.B103
+z_mount_top,4.5,mm,DERIVED,Optical bracket top,Params.B104
+z_seat_top,5.5,mm,DERIVED,Spring seat top,Params.B105
+z_flange_bot,13.5,mm,DERIVED,Flange underside (cocked),Params.B106
+z_flange_top,16.5,mm,DERIVED,Flange top (cocked),Params.B107
+z_guide_top,20.5,mm,DERIVED,Guide top = travel-stop face,Params.B108
+z_stop_top,22.5,mm,DERIVED,Travel stop top,Params.B109
+z_split,25.5,mm,DERIVED,Shell split plane = support plate top,Params.B110
+z_fs,24.0,mm,DERIVED,Finger contact surface (trough bottom),Params.B111
+z_win_top,23.2,mm,DERIVED,Contact window top (cocked),Params.B112
+z_ceiling,40.0,mm,DERIVED,Tunnel reaction ceiling,Params.B113
+z_tunnel_axis,29.0,mm,DERIVED,Tunnel arch axis,Params.B114
+top_over_tunnel,2.0,mm,DERIVED,Roof thickness over tunnel (check >= 1.5),Params.B115
+z_lens_top,11.0,mm,DERIVED,Camera lens front,Params.B116
+working_distance,13.0,mm,DERIVED,Lens front -> skin (macro lens needed),Params.B117
+z_pin,15.0,mm,DERIVED,Cocking pin axis (cocked),Params.B118
+guide_id,20.6,mm,DERIVED,Guide bore,Params.B119
+guide_od,24.6,mm,DERIVED,Guide OD,Params.B120
+stop_bore,17.1,mm,DERIVED,Travel-stop bore,Params.B121
+z_lever_bot,16.6,mm,DERIVED,Latch lever underside,Params.B122
+z_lever_top,18.6,mm,DERIVED,Latch lever top,Params.B123
+z_lever_mid,17.6,mm,DERIVED,Latch lever mid-plane / release button axis,Params.B124
+latch_pivot_x,79.0,mm,DERIVED,Latch pivot X,Params.B125
+latch_pivot_y,-11.0,mm,DERIVED,Latch pivot Y,Params.B126
+latch_tooth_y,-8.8,mm,DERIVED,Latch tooth tip Y,Params.B127
+release_button_x,66.0,mm,DERIVED,Release button X,Params.B128
+latch_spring_x,67.0,mm,DERIVED,Latch return-spring X,Params.B129
+latch_post_y,-5.0,mm,DERIVED,Latch spring post face Y,Params.B130
+stroke,0.0,mm,DERIVED,Current plunger stroke from cocked position,Params.B131
+latch_angle,0.0,deg,DERIVED,Current latch lever angle,Params.B132
+spring_len_current,8.0,mm,DERIVED,Current spring length,Params.B133
+latch_spring_len,6.0,mm,DERIVED,Current latch-spring length,Params.B134
+z_tray_top,11.6,mm,DERIVED,Tray top,Params.B135
+z_pcb_bot,14.6,mm,DERIVED,Carrier / charger PCB underside,Params.B136
+z_pcb_top,16.2,mm,DERIVED,Carrier / charger PCB top,Params.B137
+z_usb_mid,17.83,mm,DERIVED,USB-C axis Z,Params.B138
+z_oled_pcb_top,38.6,mm,DERIVED,OLED PCB top,Params.B139
+z_max_pcb_top,22.45,mm,DERIVED,MAX30102 PCB top,Params.B140
+plate_x0,69.0,mm,DERIVED,Finger-support plate rear edge,Params.B141
+plate_x1,121.5,mm,DERIVED,Finger-support plate front edge,Params.B142
+z_button_cap_bot,39.0,mm,DERIVED,UI button flange underside,Params.B143
+z_switch_bot,34.5,mm,DERIVED,Tactile switch body underside,Params.B144
+hole_r,1.2,mm,DERIVED,M2 clearance hole radius,Params.B145
+pilot_r,0.85,mm,DERIVED,M2 pilot radius,Params.B146
+spring_preload_at_stop,2.0,mm,DERIVED,Spring deflection with plunger on stop (must be > 0 for retention),Params.B147
