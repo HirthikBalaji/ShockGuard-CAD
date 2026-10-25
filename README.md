@@ -18,13 +18,16 @@ This repository holds an editable, fully parametric **FreeCAD 1.1** assembly, ge
 | Path | What it is |
 |---|---|
 | [`CAD/ShockGuard_Assembly.FCStd`](CAD/ShockGuard_Assembly.FCStd) | Native parametric FreeCAD model: 29 PartDesign bodies plus 32 fastener links, driven by a master `Params` spreadsheet |
+| [`Hardware/`](Hardware) | KiCad v7/v8 carrier board schematic & 4-layer PCB layout, itemized electronics BOM, and pinout diagrams |
+| [`Firmware/`](Firmware) | ESP32-S3 PlatformIO firmware: MAX30102 PPG driver, OV2640 camera acquisition, SSD1306 UI, skin-tone calibration, CRT estimator, and shock triage |
+| [`Software/`](Software) | Synthetic skin-tone benchmark suite and real-time serial telemetry streamer |
 | [`STEP/ShockGuard_Assembly.step`](STEP/ShockGuard_Assembly.step) | Full assembly (61 solids, hierarchy preserved) |
 | [`STEP/components/`](STEP/components) | 29 part STEPs and 4 screw STEPs |
 | [`STL/printable/`](STL/printable) | 15 FDM-printable parts, re-oriented and placed at the bed origin |
 | [`STL/ShockGuard_Assembly.stl`](STL/ShockGuard_Assembly.stl) | Visualisation mesh of the whole assembly |
 | [`Drawings/ShockGuard_Engineering_Drawings.pdf`](Drawings/ShockGuard_Engineering_Drawings.pdf) | 7 A3 engineering sheets ([PNG previews](Drawings/sheet_previews)) |
 | [`Renders/`](Renders) | 12 annotated views rendered from the CAD geometry |
-| [`Docs/`](Docs) | Design notes, verification summary, regeneration guide, parameter table, BOM, machine-readable report |
+| [`Docs/`](Docs) | Engineering notes, electronics architecture, firmware specification, skin-tone calibration guide, verification summary, BOMs |
 | [`scripts/`](scripts) | Source automation: build → verify/export → render → annotate → drawings |
 
 ## Design at a glance
